@@ -1,0 +1,26 @@
+.contact {
+  background-image: linear-gradient(
+    rgba($color-font-2, 0.9),
+    rgba($color-font-2, 0.9)
+  );
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: minmax(min-content, 1fr) minmax(2rem, 10rem);
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+
+  transition: all 1s, opacity 1s;
+
+  &__container {
+    color: $color-font-grey;
+    padding: 3rem 6rem;
+  }
+
+  &__social {
+    ul {
+      list-style: none;
+    }
+    justify-self: center;
+    align-self: center;
+  }
+}

@@ -1,0 +1,28 @@
+.logo {
+  &--header {
+    grid-row: logo-start / logo-end;
+    animation-name: moveFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+  }
+
+  &--footer {
+  }
+
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  transition: all 0.2s;
+
+  &__icon {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 5rem;
+    height: 5rem;
+    filter: invert(15%) sepia(85%) saturate(5280%) hue-rotate(333deg)
+      brightness(88%) contrast(109%);
+    animation: moveLogoIcon infinite ease-out 3s;
+  }
+}

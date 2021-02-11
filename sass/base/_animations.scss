@@ -1,0 +1,155 @@
+//good
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50rem);
+  }
+
+  80% {
+    transform: translateX(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50rem);
+  }
+
+  80% {
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+//good
+@keyframes moveFromDownRight {
+  0% {
+    opacity: 0;
+    transform: translateY(50rem) translateX(15rem);
+  }
+
+  80% {
+    transform: translateY(-5rem) translateX(-5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+// good
+@keyframes appearFromBottom {
+  0% {
+    transform: translateY(25rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// good
+@keyframes moveFromLeftWelcome {
+  0% {
+    opacity: 1;
+    transform: translateX(-170rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+//good
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveLine {
+  0% {
+    opacity: 0;
+    transform: translatex(-100rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveLogoIcon {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-3rem) scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes movingMessageLeft {
+  0% {
+    transform: translateX(30rem);
+  }
+
+  50% {
+    transform: translateX(-30rem);
+  }
+
+  100% {
+    transform: translateX(30rem);
+  }
+}
+
+@keyframes movingMessageRight {
+  0% {
+    transform: translateX(-30rem);
+  }
+
+  50% {
+    transform: translateX(30rem);
+  }
+
+  100% {
+    transform: translateX(-30rem);
+  }
+}

@@ -1,0 +1,98 @@
+// created this pseudo elment so I can manipulte the background-image with filter
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/computer-large.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: opacity(0.3) sepia(0.8) drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.4));
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  grid-row: header-start / header-end;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(10, minmax(min-content, 1fr));
+  grid-template-rows: repeat(8, minmax(min-content, 1fr));
+  justify-items: center;
+  align-items: center;
+
+  backface-visibility: hidden;
+
+  &__inside {
+    position: relative;
+    grid-row: 3 / 6;
+    grid-column: 2 / 10;
+    z-index: 10;
+  }
+
+  &__heading-1 {
+    color: $color-font-2;
+    position: relative;
+
+    // animating the ::after so it appears from left.
+    // need the animation-fill-mode set to backwards
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom: 2px solid $color-primary-1;
+      height: 100%;
+      width: 100%;
+      animation: moveLine 1s ease-out 2s;
+      animation-fill-mode: backwards;
+    }
+    line-height: 1;
+
+    animation-name: moveFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+  }
+
+  &__btns {
+    display: none;
+    grid-row: 6 / 7;
+    grid-column: 3 / 9;
+    grid-template-columns: repeat(3, 1fr);
+
+    align-self: end;
+    justify-content: space-between;
+    justify-items: center;
+    z-index: 10;
+
+    width: 100%;
+
+    animation-name: appearFromBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+  }
+}
+
+// the messages from header
+.header {
+  &__message {
+    justify-content: center;
+    transition: all 5s;
+    grid-row: 5 / 7;
+    grid-column: 3 / 9;
+    opacity: 0;
+
+    &--1 {
+      transition: all 3s;
+      animation: moveFromLeft 5s ease-out;
+    }
+    &--2 {
+      transition: all 3s;
+      animation: moveFromRight 5s ease-out;
+      align-self: end;
+    }
+  }
+}

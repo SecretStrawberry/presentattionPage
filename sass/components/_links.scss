@@ -1,0 +1,64 @@
+.link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: $color-font-2;
+    text-decoration: none;
+
+    transition: all 0.2s;
+  }
+  &--make-contact {
+    &:hover,
+    &:focus {
+      border-radius: 2px;
+      @include boxShadowLight;
+      transform: rotate(-5deg) scale(1.2);
+      color: $color-primary-1;
+    }
+  }
+}
+
+.text-link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: currentColor;
+
+    transition: all 0.2s;
+  }
+  &:hover,
+  &:active {
+    text-transform: uppercase;
+    color: $color-primary-1;
+    @include boxShadow;
+    transform: rotate(5deg) scale(1.2);
+  }
+}
+
+.footer-links {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+
+    font-size: 2rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: $color-font-grey;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translatex(3rem) translateY(-0.5rem);
+    background-color: rgba($color-primary-1, 0.7);
+    @include boxShadowDark;
+  }
+
+  &:active {
+    transform: translatex(2rem) translateY(0);
+    @include boxShadow;
+  }
+}

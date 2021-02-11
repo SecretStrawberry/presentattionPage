@@ -1,0 +1,35 @@
+// shadows
+
+@mixin shadowStrawberry {
+  box-shadow: rgba(#e8004a, 1);
+}
+
+@mixin boxShadowLighter {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+@mixin boxShadowLight {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+@mixin boxShadow {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+@mixin boxShadowDark {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+@mixin boxShadowDarker {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+}
+
+@mixin boxShadowDarker-More {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+}
+
+// borders
+
+@mixin borderGlass {
+  border: 1px solid rgba($color-font-grey, 0.2);
+}
