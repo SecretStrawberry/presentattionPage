@@ -12,6 +12,9 @@
     border: none;
     @include boxShadowLighter;
   }
+  // hover in preparing of the animation moving little up and enlarge
+  // seting the opacity of the ::after to 0 I make sure that this is not shown
+  // after the animation ends
   &:hover {
     transform: translateY(-3px);
     @include boxShadow;
@@ -28,6 +31,8 @@
     @include boxShadowLight;
   }
 
+  // making the after element visible and pushing it
+  // in the back with z-index
   &::after {
     content: "";
     height: 100%;
@@ -47,6 +52,8 @@
       background-color: $color-font-2;
     }
   }
+
+  // animate the ::after so it shows on hover
 
   &__animated {
     animation: moveInButton 0.5 ease-out 0.75;

@@ -1,6 +1,5 @@
 .story {
   margin-top: 5rem;
-  //background-image: linear-gradient(rgba($color-font--2, .5), rgba($color-font--2, .5)), url(image_path('story-large.jpg'));
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -18,8 +17,9 @@
     [pic-start] minmax(min-content, 1fr) [pic-end] minmax(2rem, 10rem);
   gap: 2rem;
 
-  transition: all 1s, opacity 1s;
+  transition: all 3s, opacity 3s;
 
+  // the main text in story section
   &__hello {
     background-color: rgba(#fafafa, 0.1);
     grid-row: row-start 1 / row-end 4;
@@ -27,8 +27,11 @@
 
     @include boxShadowLighter;
     border-radius: 2px;
+
+    transition: all 3s, opacity 3s;
   }
 
+  /// common properties of the squares in the story section
   &__technologies,
   &__knowledge,
   &__tools {
@@ -43,7 +46,16 @@
     display: grid;
 
     grid-template-columns: minmax(min-content, 1fr);
+    transition: all 0.2s;
 
+    // hover effect moving up and to the tight
+    &:hover,
+    &:focus {
+      transform: translateY(-1rem) translateX(1rem);
+      @include boxShadowDark;
+    }
+
+    // unordered list container so I can center the ul and li
     &__list-container {
       justify-self: center;
       align-content: center;
@@ -58,6 +70,7 @@
     }
   }
 
+  // individual positioning
   &__technologies {
     grid-column: p-start 1 / p-end 1;
   }

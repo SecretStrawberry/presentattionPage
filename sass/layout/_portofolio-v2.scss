@@ -23,9 +23,17 @@
     @include borderGlass;
     border-radius: 2px;
 
+    // box surrounding the pics in the portoflio
+    // enlarge on hover
     &:hover {
       transform: scale(1.04);
       @include boxShadowDark;
+    }
+
+    // the picure itself is scaled down on the hover
+    &:hover .img,
+    &:focus .img {
+      transform: scale(0.9);
     }
 
     &--1,
@@ -54,11 +62,6 @@
     &--6 {
       grid-column: col-start 2 / col-end 2;
     }
-  }
-
-  &__images:hover .img,
-  &__images:focus .img {
-    transform: scale(0.9);
   }
 
   &__text-content {

@@ -32,7 +32,7 @@
   </head>
   <body class="container">
     <div class="logo logo--header">
-      <span class="logo--header__span1">Secret</span
+      <span class="logo--header__span1" id="home">Secret</span
       ><span class="logo--header__span2">Strawberry</span
       ><sub>by Horia Surdu</sub>
       <img
@@ -96,7 +96,7 @@
           </p>
         </div>
 
-        <a href="#" class="btn btn--blue btn__animated">Make contact</a>
+        <a href="#cnt" class="btn btn--blue btn__animated">Make contact</a>
       </div>
 
       <div class="portofolio__images portofolio__images--1">
@@ -136,51 +136,11 @@
           src="https://new-presentation.s3.eu-north-1.amazonaws.com/story-large.jpg"
         />
       </div>
-
-      <!-- <div class="slider">
-        <div class="slide slide--1">
-          <div class="slide__content">
-            <h5 class="slide__header">Slide 1</h5>
-            <img
-              class="img"
-              src="https://new-presentation.s3.eu-north-1.amazonaws.com/story-large.jpg"
-            />
-          </div>
-        </div>
-
-        <div class="slide slide--2">
-          <div class="slide__content">
-            <h5 class="slide__header">Slide 2</h5>
-            <img
-              class="img"
-              src="https://new-presentation.s3.eu-north-1.amazonaws.com/computer-large.jpg"
-            />
-          </div>
-        </div>
-
-        <div class="slide slide--3">
-          <div class="slide__content">
-            <h5 class="slide__header">Slide 3</h5>
-            <img
-              class="img"
-              src="https://new-presentation.s3.eu-north-1.amazonaws.com/mountin-large.jpg"
-            />
-          </div>
-        </div>
-
-        <button class="slider__btn slider__btn--left">
-         <img src="https://new-presentation.s3.eu-north-1.amazonaws.com/chevron-back-outline.svg" alt="chevron back" class="chevron">
-        </button>
-        <button class="slider__btn slider__btn--right">
-          <img src="https://new-presentation.s3.eu-north-1.amazonaws.com/chevron-forward-outline.svg" alt="chevron forward" class="chevron">
-        </button>
-        <div class="dots"></div>
-      </div> -->
     </section>
 
-    <section class="story section">
+    <section class="story">
       <p class="story__hello">
-        Well hello there! <br />
+        Well hello there! Let me proper introduce my self.`<br />
         <br />
         I am Horia and I would like to say a few words about me, if you would
         indulge so. <br />
@@ -199,7 +159,7 @@
         <br />
         Thank you for visiting me at "SecretStrawberry" and if you liked what
         you've seen and what you read, you are more then welcome to send me a
-        <a href="#" class="text-link">message</a>.
+        <a href="#cnt" class="text-link">message</a>.
       </p>
 
       <div class="story__technologies">
@@ -236,12 +196,13 @@
           </ul>
         </div>
       </div>
+
       <picture class="story__picture">
         <img src="/img/profile.jpg" alt="Picture of Horia" class="story__img" />
       </picture>
     </section>
 
-    <footer class="contact section">
+    <footer class="contact section" id="cnt">
       <div class="contact__container">
         <h2>Contact</h2>
         <h4>Horia-Viorel Surdu</h4>
@@ -250,22 +211,65 @@
       </div>
 
       <div class="logo logo--footer">
-        <span class="logo--footer__span1">Secret</span
-        ><span class="logo--footer__span2">Strawberry</span>
-        <img
-          class="logo__icon"
-          src="https://new-presentation.s3.eu-north-1.amazonaws.com/strawberry-drawing-svgrepo-com.svg"
-          alt="strawberry"
-        />
+        <a href="#home">
+          <span class="logo--footer__span1">Secret</span
+          ><span class="logo--footer__span2">Strawberry</span>
+          <img
+            class="logo__icon"
+            src="https://new-presentation.s3.eu-north-1.amazonaws.com/strawberry-drawing-svgrepo-com.svg"
+            alt="strawberry"
+          />
+        </a>
       </div>
 
       <div class="contact__social">
         <ul>
-          <li><a href="#" class="footer-links">Twiter</a></li>
-          <li><a href="#" class="footer-links">Facebook</a></li>
-          <li><a href="#" class="footer-links">linkedIn</a></li>
-          <li><a href="#" class="footer-links">Instagram</a></li>
+          <li>
+            <a
+              href="https://twitter.com/Horia03933048"
+              class="footer-links"
+              target="_blank"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/SecretStrawberryWebSerices"
+              class="footer-links"
+              target="_blank"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/viorel-horia-surdu-202b601ab/"
+              class="footer-links"
+              target="_blank"
+              >linkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/surduhoria/"
+              class="footer-links"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
         </ul>
+      </div>
+
+      <div class="special-thanks">
+        I want to aknowledge a few perssons and such that helped me a lot with
+        becoming better at web development. <br />
+        <br />
+        Hermina Surdu: copy editing and moral support. <br />
+        Vlad Surdu & Mihai Musat: design ideas, objective input and moral
+        support. <br />
+        Jonas Schmedtmann: wich online classes on Udemy are so good made. <br />
+        Udemy: for having on sale the classes I needed. <br />
+        Least but not last speacial thanks to my family and friends who belived
+        in me and supported me.
       </div>
     </footer>
   </body>

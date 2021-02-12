@@ -1,4 +1,20 @@
-//good
+@keyframes moveLogoIcon {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-3rem) scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0) scale(1);
+  }
+}
+
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -106,50 +122,5 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes moveLogoIcon {
-  0% {
-    opacity: 0;
-    transform: translateX(0);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translateX(-3rem) scale(1.1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(0) scale(1);
-  }
-}
-
-@keyframes movingMessageLeft {
-  0% {
-    transform: translateX(30rem);
-  }
-
-  50% {
-    transform: translateX(-30rem);
-  }
-
-  100% {
-    transform: translateX(30rem);
-  }
-}
-
-@keyframes movingMessageRight {
-  0% {
-    transform: translateX(-30rem);
-  }
-
-  50% {
-    transform: translateX(30rem);
-  }
-
-  100% {
-    transform: translateX(-30rem);
   }
 }

@@ -24,6 +24,8 @@
 
   backface-visibility: hidden;
 
+  // holds the heading and all the lements in the header so they can be visible
+  // because of the pseudo element header::before that contains the background-image
   &__inside {
     position: relative;
     grid-row: 3 / 6;
@@ -34,7 +36,7 @@
   &__heading-1 {
     color: $color-font-2;
     position: relative;
-
+    // the undeline from the heading
     // animating the ::after so it appears from left.
     // need the animation-fill-mode set to backwards
     &::after {
@@ -50,33 +52,15 @@
     }
     line-height: 1;
 
+    // the heading moving into view
     animation-name: moveFromRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.2s;
-  }
-
-  &__btns {
-    display: none;
-    grid-row: 6 / 7;
-    grid-column: 3 / 9;
-    grid-template-columns: repeat(3, 1fr);
-
-    align-self: end;
-    justify-content: space-between;
-    justify-items: center;
-    z-index: 10;
-
-    width: 100%;
-
-    animation-name: appearFromBottom;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-delay: 0.2s;
   }
 }
 
-// the messages from header
+// the moving  messages from under the heading
 .header {
   &__message {
     justify-content: center;
