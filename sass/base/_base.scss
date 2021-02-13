@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,8 +26,5 @@ body {
       [row-start] min-content [row-end]
     );
   grid-template-columns: 100%;
-  //background-image: linear-gradient(to bottom, rgba(#F2F2F2, .9), rgba(#DBDBDB, .9),rgba(#EAEAEA, .9));
-  //background-image: linear-gradient(to bottom, rgba(#fceabb, .5), rgba(#f8b500, .5));
-  //background-image: linear-gradient(to bottom, rgba(#e9d362, .5), rgba(#333333, .5)), url("natural_paper_@2X.png");
   background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/vintage-concrete.png");
 }
