@@ -19,7 +19,8 @@ body {
   display: grid;
   grid-template-rows: [logo-start] 9rem [logo-end header-start] 80vh [header-end] repeat(3, [row-start] min-content [row-end]);
   grid-template-columns: 100%;
-  background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/vintage-concrete.png"); }
+  background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/vintage-concrete.png");
+  transition: all 0.2s ease-in-out; }
 
 @keyframes moveLogoIcon {
   0% {
@@ -99,6 +100,14 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes animateNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .container {
   font-family: "Lato", sans-serif;
@@ -291,7 +300,8 @@ body {
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  background-color: rgba(247, 241, 227, 0.9); }
+  background-color: rgba(247, 241, 227, 0.9);
+  transition: all 0.2s ease-in-out; }
   .navigation__list {
     display: flex;
     justify-content: space-between;
@@ -328,7 +338,8 @@ body {
 .sticky {
   background-color: rgba(247, 241, 227, 0.9);
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  animation: animateNav 0.5s ease-in-out; }
 
 .header::before {
   content: "";
