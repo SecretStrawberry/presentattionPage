@@ -191,7 +191,7 @@ body {
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 1rem;
   transition: all 0.2s;
   position: relative;
   border: none;
@@ -204,7 +204,7 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active, .btn:focus {
+.btn:active {
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -213,7 +213,7 @@ body {
   content: "";
   height: 100%;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 1rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -226,9 +226,21 @@ body {
   .btn--blue::after {
     background-color: #03224c; }
 
+.btn--white {
+  border-radius: 1rem;
+  background-color: #f7f1e3;
+  color: #03224c; }
+  .btn--white::after {
+    border-radius: 1rem;
+    background-color: #f7f1e3; }
+
 .btn__animated {
-  animation: moveInButton 0.5 ease-out 0.75;
+  animation: moveInButton 0.5 ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.navigation__link:link, .navigation__link:visited {
+  text-decoration: none;
+  color: #03224c; }
 
 .link:link, .link:visited {
   display: inline-block;
@@ -273,6 +285,34 @@ body {
   transform: translatex(2rem) translateY(0);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
+.navigation {
+  position: relative;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  background-color: rgba(247, 241, 227, 0.9); }
+  .navigation__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; }
+  .navigation li {
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s; }
+    .navigation li:hover {
+      background-color: #ffa4c1;
+      border-radius: 2px; }
+  .navigation__icon {
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    fill: #03224c; }
+
 .section--hidden {
   opacity: 0;
   transform: translateY(10rem); }
@@ -283,7 +323,12 @@ body {
 
 .footer--hidden {
   opacity: 0;
-  transform: translateX(100rem); }
+  transform: translateX(-50rem); }
+
+.sticky {
+  background-color: rgba(247, 241, 227, 0.9);
+  position: fixed;
+  width: 100%; }
 
 .header::before {
   content: "";
@@ -293,7 +338,7 @@ body {
   background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/computer-large.jpg");
   background-size: cover;
   background-position: center;
-  filter: opacity(0.3) sepia(0.8) drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.4));
+  filter: opacity(0.3) sepia(0) blur(2px) drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.4));
   width: 100%;
   height: 100%; }
 
@@ -308,9 +353,15 @@ body {
   backface-visibility: hidden; }
   .header__inside {
     position: relative;
-    grid-row: 3 / 6;
+    grid-row: 2 / 4;
     grid-column: 2 / 10;
     z-index: 10; }
+  .header__pos--1, .header__pos--2 {
+    grid-row: 7 / 9; }
+  .header__pos--1 {
+    grid-column: 4 / 6; }
+  .header__pos--2 {
+    grid-column: 6 / 8; }
   .header__heading-1 {
     color: #03224c;
     position: relative;
@@ -346,19 +397,17 @@ body {
 
 .logo {
   align-self: center;
-  justify-self: center;
-  position: relative;
+  justify-self: start;
   transition: all 0.2s; }
   .logo--header {
-    grid-row: logo-start / logo-end;
     animation-name: moveFromLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-delay: 0.2s; }
   .logo__icon {
     position: absolute;
-    top: -10%;
-    left: 0;
+    top: 1.4rem;
+    left: 5rem;
     width: 5rem;
     height: 5rem;
     filter: invert(15%) sepia(85%) saturate(5280%) hue-rotate(333deg) brightness(88%) contrast(109%);
@@ -474,6 +523,8 @@ body {
     border-radius: 2px; }
 
 .contact {
+  grid-row: row-start 3 / row-end 3;
+  grid-column: 1 / -1;
   background-image: linear-gradient(rgba(3, 34, 76, 0.9), rgba(3, 34, 76, 0.9));
   background-size: cover;
   background-position: center;
@@ -491,8 +542,17 @@ body {
     align-self: center; }
     .contact__social ul {
       list-style: none; }
+      .contact__social ul li {
+        display: flex;
+        align-items: center; }
+  .contact__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #f6f6f6; }
 
 .logo--footer {
+  justify-self: center;
+  position: relative;
   grid-column: col-start 2 / col-end 3; }
   .logo--footer a:link, .logo--footer a:visited {
     text-decoration: none; }

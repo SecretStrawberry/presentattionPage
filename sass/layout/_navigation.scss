@@ -1,0 +1,38 @@
+.navigation {
+  position: relative;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+
+  background-color: rgba($color-font-grey-1, 0.9);
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style: none;
+  }
+
+  li {
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgba($color-primary-2, 1);
+      border-radius: 2px;
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    fill: $color-font-2;
+  }
+}

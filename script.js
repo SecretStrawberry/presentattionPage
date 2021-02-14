@@ -1,11 +1,31 @@
 "use strict";
+
+//////////////////////////////////////////////////
+//Navigation
+const header = document.querySelector(".header");
+const nav = document.querySelector(".navigation");
+const navHeight = nav.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(header);
+
 /////////////////////////////////////////////////
 //reveal sections
 // we just need to call the function giving arguments as strings:
 // 1. the section (css class) that we need to reveal
 // 2. and the the element (css class) that performs the animation
 // THIS ONLY WORKS FOR ONE ELEMENT AT A TIME!!!!!!!
-
 const revealSections = function (sectionToHide, elementToApply) {
   const section = document.querySelector(sectionToHide);
 

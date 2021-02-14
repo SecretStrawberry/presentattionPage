@@ -7,7 +7,8 @@
   background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/computer-large.jpg");
   background-size: cover;
   background-position: center;
-  filter: opacity(0.3) sepia(0.8) drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.4));
+  filter: opacity(0.3) sepia(0) blur(2px)
+    drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.4));
   width: 100%;
   height: 100%;
 }
@@ -28,9 +29,23 @@
   // because of the pseudo element header::before that contains the background-image
   &__inside {
     position: relative;
-    grid-row: 3 / 6;
+    grid-row: 2 / 4;
     grid-column: 2 / 10;
     z-index: 10;
+  }
+
+  &__pos {
+    &--1,
+    &--2 {
+      grid-row: 7 / 9;
+    }
+
+    &--1 {
+      grid-column: 4 / 6;
+    }
+    &--2 {
+      grid-column: 6 / 8;
+    }
   }
 
   &__heading-1 {

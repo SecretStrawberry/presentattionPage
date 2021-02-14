@@ -1,3 +1,13 @@
+.navigation {
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-font-2;
+    }
+  }
+}
+
 .link {
   &:link,
   &:visited {

@@ -31,18 +31,46 @@
     <script defer src="script.js"></script>
   </head>
   <body class="container">
-    <div class="logo logo--header">
-      <span class="logo--header__span1" id="home">Secret</span
-      ><span class="logo--header__span2">Strawberry</span
-      ><sub>by Horia Surdu</sub>
-      <img
-        class="logo__icon"
-        src="https://new-presentation.s3.eu-north-1.amazonaws.com/strawberry-drawing-svgrepo-com.svg"
-        alt="strawberry"
-      />
-    </div>
+    <nav class="navigation">
+      <div class="logo logo--header">
+        <span class="logo--header__span1">Secret</span
+        ><span class="logo--header__span2">Strawberry</span
+        ><sub>by Horia Surdu</sub>
+        <img
+          class="logo__icon"
+          src="https://new-presentation.s3.eu-north-1.amazonaws.com/strawberry-drawing-svgrepo-com.svg"
+          alt="strawberry"
+        />
+      </div>
 
-    <div class="header">
+      <ul class="navigation__list">
+        <li>
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-home"></use>
+          </svg>
+          <a href="#" class="navigation__link">Home</a>
+        </li>
+        <li>
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-images"></use></svg
+          ><a href="#" class="navigation__link">Portofolio</a>
+        </li>
+        <li>
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-profile"></use>
+          </svg>
+          <a href="#" class="navigation__link">About</a>
+        </li>
+        <li>
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-mail2"></use>
+          </svg>
+          <a href="#" class="navigation__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header" id="home">
       <div class="header__message header__message--1">
         <p class="header__message-paragraph header__message-paragraph--1">
           No strawberrys were hurt during making of this page!
@@ -56,6 +84,12 @@
       <div class="header__inside">
         <h1 class="header__heading-1">Web design Services</h1>
       </div>
+      <button class="btn btn--white btn__animated header__pos--1">
+        See the Portofolio
+      </button>
+      <button class="btn btn--white btn__animated header__pos--2">
+        Read about it
+      </button>
     </div>
 
     <section class="portofolio section">
@@ -233,6 +267,9 @@
       <div class="contact__social">
         <ul>
           <li>
+            <svg class="contact__icon">
+              <use xlink:href="img/footer_sprite.svg#icon-twitter"></use>
+            </svg>
             <a
               href="https://twitter.com/Horia03933048"
               class="footer-links"
@@ -241,6 +278,9 @@
             >
           </li>
           <li>
+            <svg class="contact__icon">
+              <use xlink:href="img/footer_sprite.svg#icon-facebook"></use>
+            </svg>
             <a
               href="https://www.facebook.com/SecretStrawberryWebSerices"
               class="footer-links"
@@ -249,6 +289,9 @@
             >
           </li>
           <li>
+            <svg class="contact__icon">
+              <use xlink:href="img/footer_sprite.svg#icon-linkedin2"></use>
+            </svg>
             <a
               href="https://www.linkedin.com/in/viorel-horia-surdu-202b601ab/"
               class="footer-links"
@@ -257,6 +300,9 @@
             >
           </li>
           <li>
+            <svg class="contact__icon">
+              <use xlink:href="img/footer_sprite.svg#icon-instagram"></use>
+            </svg>
             <a
               href="https://www.instagram.com/surduhoria/"
               class="footer-links"
@@ -274,9 +320,11 @@
         Hermina Surdu: copy editing and moral support. <br />
         Vlad Surdu & Mihai Musat: design ideas, objective input and moral
         support. <br />
-        Jonas Schmedtmann: wich online classes on Udemy are so good made. <br />
+        Phillipa: for beaing my SecretStrawberry. <br />
+        Jonas Schmedtmann: which online classes on Udemy are so well done.
+        <br />
         Udemy: for having on sale the classes I needed. <br />
-        Least but not last speacial thanks to my family and friends who belived
+        Least but not last special thanks to my family and friends who belived
         in me and supported me.
       </div>
     </footer>

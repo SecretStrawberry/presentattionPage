@@ -1,4 +1,6 @@
 .contact {
+  grid-row: row-start 3 / row-end 3;
+  grid-column: 1 / -1;
   background-image: linear-gradient(
     rgba($color-font-2, 0.9),
     rgba($color-font-2, 0.9)
@@ -24,13 +26,25 @@
     grid-column: col-start 4 / col-end 4;
     ul {
       list-style: none;
+      li {
+        display: flex;
+        align-items: center;
+      }
     }
     justify-self: center;
     align-self: center;
   }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-font-grey;
+  }
 }
 
 .logo--footer {
+  justify-self: center;
+  position: relative;
   grid-column: col-start 2 / col-end 3;
   a {
     &:link,

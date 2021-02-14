@@ -10,5 +10,11 @@
 
 .footer--hidden {
   opacity: 0;
-  transform: translateX(100rem);
+  transform: translateX(-50rem);
+}
+
+.sticky {
+  background-color: rgba($color-font-grey-1, 0.9);
+  position: fixed;
+  width: 100%;
 }

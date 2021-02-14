@@ -6,7 +6,7 @@
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 2px;
+    border-radius: 1rem;
     transition: all 0.2s;
     position: relative;
     border: none;
@@ -24,8 +24,7 @@
     }
   }
 
-  &:active,
-  &:focus {
+  &:active {
     outline: none;
     transform: translateY(-1px);
     @include boxShadowLight;
@@ -37,7 +36,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    border-radius: 2px;
+    border-radius: 1rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,10 +52,20 @@
     }
   }
 
+  &--white {
+    border-radius: 1rem;
+    background-color: $color-font-grey-1;
+    color: $color-font-2;
+    &::after {
+      border-radius: 1rem;
+      background-color: $color-font-grey-1;
+    }
+  }
+
   // animate the ::after so it shows on hover
 
   &__animated {
-    animation: moveInButton 0.5 ease-out 0.75;
+    animation: moveInButton 0.5 ease-out 0.75s;
     animation-fill-mode: backwards;
   }
 }
