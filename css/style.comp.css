@@ -19,8 +19,7 @@ body {
   display: grid;
   grid-template-rows: [logo-start] 9rem [logo-end header-start] 80vh [header-end] repeat(3, [row-start] min-content [row-end]);
   grid-template-columns: 100%;
-  background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/vintage-concrete.png");
-  transition: all 0.2s ease-in-out; }
+  background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/vintage-concrete.png"); }
 
 @keyframes moveLogoIcon {
   0% {
@@ -204,7 +203,8 @@ body {
   transition: all 0.2s;
   position: relative;
   border: none;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -247,9 +247,61 @@ body {
   animation: moveInButton 0.5 ease-out 0.75s;
   animation-fill-mode: backwards; }
 
-.navigation__link:link, .navigation__link:visited {
+.button-header, .button-header:link, .button-header:visited {
+  position: relative;
   text-decoration: none;
-  color: #03224c; }
+  padding: 1.5rem 4rem;
+  width: 25rem;
+  font-size: 2rem;
+  font-weight: 400;
+  border-radius: 1rem;
+  border: 2px;
+  background-color: transparent;
+  transition: all 0.2s; }
+
+.button-header--white {
+  color: #03224c;
+  border-color: #03224c;
+  box-shadow: 0 0 40rem 40rem #f7f1e3 inset, 0 0 0 0 #f7f1e3; }
+  .button-header--white:hover {
+    box-shadow: 0 0 1rem 0 #f7f1e3 inset, 0 0 1rem 0.4rem #f7f1e3;
+    color: #f7f1e3;
+    transform: translateY(-3px); }
+  .button-header--white:active {
+    transform: translateY(1px);
+    color: #e8004a; }
+
+.navigation__link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%; }
+  .navigation__link:link, .navigation__link:visited {
+    text-decoration: none;
+    color: #03224c; }
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; }
+
+.navigation li {
+  padding: 0.5rem 1rem;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s; }
+  .navigation li:hover {
+    background-color: #ffa4c1;
+    border-radius: 2px; }
+
+.navigation__icon {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  fill: #03224c; }
 
 .link:link, .link:visited {
   display: inline-block;
@@ -295,33 +347,15 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
 .navigation {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 2rem 5rem;
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  background-color: rgba(247, 241, 227, 0.9);
-  transition: all 0.2s ease-in-out; }
-  .navigation__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none; }
-  .navigation li {
-    padding: 0.5rem 1rem;
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: all 0.2s; }
-    .navigation li:hover {
-      background-color: #ffa4c1;
-      border-radius: 2px; }
-  .navigation__icon {
-    margin-right: 1rem;
-    width: 2rem;
-    height: 2rem;
-    fill: #03224c; }
+  background-color: rgba(247, 241, 227, 0.2); }
 
 .section--hidden {
   opacity: 0;
@@ -354,7 +388,7 @@ body {
   height: 100%; }
 
 .header {
-  grid-row: header-start / header-end;
+  grid-row: logo-start / header-end;
   position: relative;
   display: grid;
   grid-template-columns: repeat(10, minmax(min-content, 1fr));
@@ -362,20 +396,18 @@ body {
   justify-items: center;
   align-items: center;
   backface-visibility: hidden; }
-  .header__inside {
-    position: relative;
-    grid-row: 2 / 4;
-    grid-column: 2 / 10;
-    z-index: 10; }
-  .header__pos--1, .header__pos--2 {
-    grid-row: 7 / 9; }
-  .header__pos--1 {
-    grid-column: 4 / 6; }
-  .header__pos--2 {
-    grid-column: 6 / 8; }
+  .header__button--1, .header__button--2 {
+    grid-row: 7 / 8; }
+  .header__button--1 {
+    grid-column: 3 / 5; }
+  .header__button--2 {
+    grid-column: 7 / 9; }
   .header__heading-1 {
-    color: #03224c;
     position: relative;
+    grid-row: 4 / 5;
+    grid-column: 2 / 10;
+    z-index: 10;
+    color: #03224c;
     line-height: 1;
     animation-name: moveFromRight;
     animation-duration: 1s;
@@ -423,6 +455,9 @@ body {
     height: 5rem;
     filter: invert(15%) sepia(85%) saturate(5280%) hue-rotate(333deg) brightness(88%) contrast(109%);
     animation: moveLogoIcon infinite ease-out 3s; }
+    .logo__icon--footer {
+      top: -0.5rem;
+      left: 0; }
 
 .portofolio {
   grid-row: header-end / row-start 1;

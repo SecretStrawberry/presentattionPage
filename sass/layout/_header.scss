@@ -14,7 +14,7 @@
 }
 
 .header {
-  grid-row: header-start / header-end;
+  grid-row: logo-start / header-end;
   position: relative;
 
   display: grid;
@@ -25,32 +25,26 @@
 
   backface-visibility: hidden;
 
-  // holds the heading and all the lements in the header so they can be visible
-  // because of the pseudo element header::before that contains the background-image
-  &__inside {
-    position: relative;
-    grid-row: 2 / 4;
-    grid-column: 2 / 10;
-    z-index: 10;
-  }
-
-  &__pos {
+  &__button {
     &--1,
     &--2 {
-      grid-row: 7 / 9;
+      grid-row: 7 / 8;
     }
 
     &--1 {
-      grid-column: 4 / 6;
+      grid-column: 3 / 5;
     }
     &--2 {
-      grid-column: 6 / 8;
+      grid-column: 7 / 9;
     }
   }
 
   &__heading-1 {
-    color: $color-font-2;
     position: relative;
+    grid-row: 4 / 5;
+    grid-column: 2 / 10;
+    z-index: 10;
+    color: $color-font-2;
     // the undeline from the heading
     // animating the ::after so it appears from left.
     // need the animation-fill-mode set to backwards

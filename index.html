@@ -45,32 +45,40 @@
 
       <ul class="navigation__list">
         <li>
-          <svg class="navigation__icon">
-            <use xlink:href="img/sprite.svg#icon-home"></use>
-          </svg>
-          <a href="#" class="navigation__link">Home</a>
+          <a class="navigation__link home-link">
+            <svg class="navigation__icon">
+              <use xlink:href="img/sprite.svg#icon-home"></use>
+            </svg>
+            Home
+          </a>
         </li>
         <li>
-          <svg class="navigation__icon">
-            <use xlink:href="img/sprite.svg#icon-images"></use></svg
-          ><a href="#" class="navigation__link">Portofolio</a>
+          <a class="navigation__link portofolio-link"
+            ><svg class="navigation__icon">
+              <use xlink:href="img/sprite.svg#icon-images"></use></svg
+            >Portofolio</a
+          >
         </li>
         <li>
-          <svg class="navigation__icon">
-            <use xlink:href="img/sprite.svg#icon-profile"></use>
-          </svg>
-          <a href="#" class="navigation__link">About</a>
+          <a class="navigation__link about-link"
+            ><svg class="navigation__icon">
+              <use xlink:href="img/sprite.svg#icon-profile"></use></svg
+            >About</a
+          >
         </li>
         <li>
-          <svg class="navigation__icon">
-            <use xlink:href="img/sprite.svg#icon-mail2"></use>
-          </svg>
-          <a href="#" class="navigation__link">Contact</a>
+          <a class="navigation__link contact-link"
+            ><svg class="navigation__icon">
+              <use xlink:href="img/sprite.svg#icon-mail2"></use></svg
+            >Contact</a
+          >
         </li>
       </ul>
     </nav>
 
     <div class="header" id="home">
+      <h1 class="header__heading-1">Web design Services</h1>
+
       <div class="header__message header__message--1">
         <p class="header__message-paragraph header__message-paragraph--1">
           No strawberrys were hurt during making of this page!
@@ -81,13 +89,15 @@
           This page was not tested on animals!
         </p>
       </div>
-      <div class="header__inside">
-        <h1 class="header__heading-1">Web design Services</h1>
-      </div>
-      <button class="btn btn--white btn__animated header__pos--1">
+
+      <button
+        class="button-header button-header--white header__button--1 portofolio-link"
+      >
         See the Portofolio
       </button>
-      <button class="btn btn--white btn__animated header__pos--2">
+      <button
+        class="button-header button-header--white header__button--2 about-link"
+      >
         Read about it
       </button>
     </div>
@@ -134,7 +144,7 @@
           </p>
         </div>
 
-        <button class="btn btn--blue btn__animated btn--scroll-to">
+        <button class="btn btn--blue btn__animated contact-link">
           Make contact
         </button>
       </div>
@@ -253,14 +263,14 @@
       </div>
 
       <div class="logo logo--footer">
-        <a href="#home">
-          <span class="logo--footer__span1">Secret</span
-          ><span class="logo--footer__span2">Strawberry</span>
+        <a class="home-link">
           <img
-            class="logo__icon"
+            class="logo__icon logo__icon--footer"
             src="https://new-presentation.s3.eu-north-1.amazonaws.com/strawberry-drawing-svgrepo-com.svg"
             alt="strawberry"
           />
+          <span class="logo--footer__span1">Secret</span
+          ><span class="logo--footer__span2">Strawberry</span>
         </a>
       </div>
 
@@ -320,7 +330,6 @@
         Hermina Surdu: copy editing and moral support. <br />
         Vlad Surdu & Mihai Musat: design ideas, objective input and moral
         support. <br />
-        Phillipa: for beaing my SecretStrawberry. <br />
         Jonas Schmedtmann: which online classes on Udemy are so well done.
         <br />
         Udemy: for having on sale the classes I needed. <br />

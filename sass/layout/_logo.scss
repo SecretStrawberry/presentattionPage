@@ -20,5 +20,9 @@
     filter: invert(15%) sepia(85%) saturate(5280%) hue-rotate(333deg)
       brightness(88%) contrast(109%);
     animation: moveLogoIcon infinite ease-out 3s;
+    &--footer {
+      top: -0.5rem;
+      left: 0;
+    }
   }
 }
