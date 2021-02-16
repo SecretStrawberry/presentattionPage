@@ -43,9 +43,11 @@
 }
 
 .logo--footer {
+  grid-column: col-start 2 / col-end 3;
   justify-self: center;
   position: relative;
-  grid-column: col-start 2 / col-end 3;
+
+  cursor: pointer;
   a {
     &:link,
     &:visited {

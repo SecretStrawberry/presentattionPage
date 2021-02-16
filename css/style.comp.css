@@ -35,7 +35,7 @@ body {
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(-50rem); }
+    transform: translateX(-100rem); }
   80% {
     transform: translateX(5rem); }
   100% {
@@ -96,9 +96,11 @@ body {
 
 @keyframes appear {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    transform: rotate(360deg) scale(0.1); }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    transform: rotate(-360deg) scale(1); } }
 
 @keyframes animateNav {
   0% {
@@ -260,6 +262,10 @@ body {
   transition: all 0.2s; }
 
 .button-header--white {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-delay: 9s;
+  animation-fill-mode: backwards;
   color: #03224c;
   border-color: #03224c;
   box-shadow: 0 0 40rem 40rem #f7f1e3 inset, 0 0 0 0 #f7f1e3; }
@@ -347,6 +353,11 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
 .navigation {
+  animation-name: moveFromLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-play-state: initial;
   position: absolute;
   top: 0;
   left: 0;
@@ -412,7 +423,8 @@ body {
     animation-name: moveFromRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    animation-delay: 0.2s; }
+    animation-delay: 3.2s;
+    animation-fill-mode: backwards; }
     .header__heading-1::after {
       content: "";
       position: absolute;
@@ -421,7 +433,7 @@ body {
       border-bottom: 2px solid #e8004a;
       height: 100%;
       width: 100%;
-      animation: moveLine 1s ease-out 2s;
+      animation: moveLine 1s ease-out 3.7s;
       animation-fill-mode: backwards; }
 
 .header__message {
@@ -432,21 +444,16 @@ body {
   opacity: 0; }
   .header__message--1 {
     transition: all 3s;
-    animation: moveFromLeft 5s ease-out; }
+    animation: moveFromLeft 5s ease-out 4s; }
   .header__message--2 {
     transition: all 3s;
-    animation: moveFromRight 5s ease-out;
+    animation: moveFromRight 5s ease-out 4s;
     align-self: end; }
 
 .logo {
   align-self: center;
   justify-self: start;
   transition: all 0.2s; }
-  .logo--header {
-    animation-name: moveFromLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.2s; }
   .logo__icon {
     position: absolute;
     top: 1.4rem;
@@ -597,9 +604,10 @@ body {
     fill: #f6f6f6; }
 
 .logo--footer {
+  grid-column: col-start 2 / col-end 3;
   justify-self: center;
   position: relative;
-  grid-column: col-start 2 / col-end 3; }
+  cursor: pointer; }
   .logo--footer a:link, .logo--footer a:visited {
     text-decoration: none; }
 

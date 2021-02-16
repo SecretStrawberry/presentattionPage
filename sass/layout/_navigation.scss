@@ -1,4 +1,10 @@
 .navigation {
+  animation-name: moveFromLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-play-state: initial;
+
   position: absolute;
   top: 0;
   left: 0;

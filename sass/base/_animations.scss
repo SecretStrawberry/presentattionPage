@@ -18,7 +18,7 @@
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(-50rem);
+    transform: translateX(-100rem);
   }
 
   80% {
@@ -118,10 +118,12 @@
 @keyframes appear {
   0% {
     opacity: 0;
+    transform: rotate(360deg) scale(0.1);
   }
 
   100% {
     opacity: 1;
+    transform: rotate(-360deg) scale(1);
   }
 }
 

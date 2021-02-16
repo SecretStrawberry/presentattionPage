@@ -22,12 +22,13 @@ headerObserver.observe(header);
 
 //////////////////////////////////////////////////
 //navigation links selectors
-const homeLink = document.querySelector(".home-link");
+const homeLink = document.querySelectorAll(".home-link");
 const aboutLink = document.querySelectorAll(".about-link");
 const porotfolioLink = document.querySelectorAll(".portofolio-link");
 const contactLink = document.querySelectorAll(".contact-link");
 
 //sections selectors
+const headerSection = document.querySelector(".header");
 const porotfolioSection = document.querySelector(".portofolio");
 const aboutSection = document.querySelector(".story");
 const contactSection = document.querySelector(".contact");
@@ -42,10 +43,7 @@ const linkTheLinks = function (linkToBeLinked, sectionToMoveTo) {
   });
 };
 
-homeLink.addEventListener("click", function (e) {
-  window.scrollTo(0, top);
-});
-
+linkTheLinks(homeLink, headerSection);
 linkTheLinks(aboutLink, aboutSection);
 linkTheLinks(porotfolioLink, porotfolioSection);
 linkTheLinks(contactLink, contactSection);

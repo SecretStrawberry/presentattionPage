@@ -56,7 +56,7 @@
       border-bottom: 2px solid $color-primary-1;
       height: 100%;
       width: 100%;
-      animation: moveLine 1s ease-out 2s;
+      animation: moveLine 1s ease-out 3.7s;
       animation-fill-mode: backwards;
     }
     line-height: 1;
@@ -65,7 +65,8 @@
     animation-name: moveFromRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    animation-delay: 0.2s;
+    animation-delay: 3.2s;
+    animation-fill-mode: backwards;
   }
 }
 
@@ -80,11 +81,11 @@
 
     &--1 {
       transition: all 3s;
-      animation: moveFromLeft 5s ease-out;
+      animation: moveFromLeft 5s ease-out 4s;
     }
     &--2 {
       transition: all 3s;
-      animation: moveFromRight 5s ease-out;
+      animation: moveFromRight 5s ease-out 4s;
       align-self: end;
     }
   }
