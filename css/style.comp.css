@@ -110,6 +110,12 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .container {
   font-family: "Lato", sans-serif;
   font-size: 1.4rem;
@@ -130,13 +136,6 @@ body {
     color: #e8004a; }
   .logo--footer__span2 {
     color: #e8004a; }
-
-.welcome {
-  padding: 2rem 4rem; }
-  .welcome p {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    font-weight: 300; }
 
 .header__heading-1 {
   font-family: "Josefin Sans", sans-serif;
@@ -191,10 +190,10 @@ body {
     font-weight: 600; }
 
 .special-thanks {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1.2;
   color: #f6f6f6;
-  font-weight: 300; }
+  font-weight: 400; }
 
 .btn, .btn:link, .btn:visited {
   font-size: 2rem;
@@ -264,7 +263,7 @@ body {
 .button-header--white {
   animation-name: appear;
   animation-duration: 2s;
-  animation-delay: 9s;
+  animation-delay: 15s;
   animation-fill-mode: backwards;
   color: #03224c;
   border-color: #03224c;
@@ -281,7 +280,12 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: 100%; }
+  height: 100%;
+  animation-name: moveFromLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 5s;
+  animation-fill-mode: backwards; }
   .navigation__link:link, .navigation__link:visited {
     text-decoration: none;
     color: #03224c; }
@@ -352,12 +356,20 @@ body {
   transform: translatex(2rem) translateY(0);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
+.footer-name-link:link, .footer-name-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #f6f6f6; }
+
+.footer-name-link:hover {
+  border-radius: 2px;
+  background-color: #e8004a;
+  color: #03224c;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: rotate(5deg) scale(1.2);
+  transition: all 0.2s; }
+
 .navigation {
-  animation-name: moveFromLeft;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  animation-delay: 0.2s;
-  animation-play-state: initial;
   position: absolute;
   top: 0;
   left: 0;
@@ -366,7 +378,7 @@ body {
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  background-color: rgba(247, 241, 227, 0.2); }
+  background-color: transparent; }
 
 .section--hidden {
   opacity: 0;
@@ -413,28 +425,6 @@ body {
     grid-column: 3 / 5; }
   .header__button--2 {
     grid-column: 7 / 9; }
-  .header__heading-1 {
-    position: relative;
-    grid-row: 4 / 5;
-    grid-column: 2 / 10;
-    z-index: 10;
-    color: #03224c;
-    line-height: 1;
-    animation-name: moveFromRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 3.2s;
-    animation-fill-mode: backwards; }
-    .header__heading-1::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-bottom: 2px solid #e8004a;
-      height: 100%;
-      width: 100%;
-      animation: moveLine 1s ease-out 3.7s;
-      animation-fill-mode: backwards; }
 
 .header__message {
   justify-content: center;
@@ -444,16 +434,53 @@ body {
   opacity: 0; }
   .header__message--1 {
     transition: all 3s;
-    animation: moveFromLeft 5s ease-out 4s; }
+    animation: moveFromLeft 5s ease-out 7.5s; }
   .header__message--2 {
     transition: all 3s;
-    animation: moveFromRight 5s ease-out 4s;
+    animation: moveFromRight 5s ease-out 10s;
     align-self: end; }
+
+.heading {
+  font-size: 10rem;
+  font-weight: 100;
+  position: relative;
+  grid-row: 4 / 5;
+  grid-column: 2 / 10;
+  z-index: 10;
+  color: #03224c;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1; }
+  .heading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid #e8004a;
+    height: 100%;
+    width: 100%;
+    animation: moveLine 1s ease-out 3.5s;
+    animation-fill-mode: backwards; }
+
+.heading .letter {
+  display: inline-block;
+  transform: scale(5) translateX(-50rem) translateY(-50rem);
+  background-color: #e8004a;
+  transition: all 1s; }
+
+.letter.fade {
+  background-color: transparent;
+  transform: scale(1) translateX(0) translateY(0); }
 
 .logo {
   align-self: center;
   justify-self: start;
   transition: all 0.2s; }
+  .logo--header {
+    animation-name: moveFromLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 5s;
+    animation-fill-mode: backwards; }
   .logo__icon {
     position: absolute;
     top: 1.4rem;

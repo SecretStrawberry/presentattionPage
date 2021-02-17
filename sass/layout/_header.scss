@@ -39,35 +39,35 @@
     }
   }
 
-  &__heading-1 {
-    position: relative;
-    grid-row: 4 / 5;
-    grid-column: 2 / 10;
-    z-index: 10;
-    color: $color-font-2;
-    // the undeline from the heading
-    // animating the ::after so it appears from left.
-    // need the animation-fill-mode set to backwards
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-bottom: 2px solid $color-primary-1;
-      height: 100%;
-      width: 100%;
-      animation: moveLine 1s ease-out 3.7s;
-      animation-fill-mode: backwards;
-    }
-    line-height: 1;
+  // &__heading-1 {
+  //   position: relative;
+  //   grid-row: 4 / 5;
+  //   grid-column: 2 / 10;
+  //   z-index: 10;
+  //   color: $color-font-2;
+  //   // the undeline from the heading
+  //   // animating the ::after so it appears from left.
+  //   // need the animation-fill-mode set to backwards
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     border-bottom: 2px solid $color-primary-1;
+  //     height: 100%;
+  //     width: 100%;
+  //     animation: moveLine 1s ease-out 3.5s;
+  //     animation-fill-mode: backwards;
+  //   }
+  //   line-height: 1;
 
-    // the heading moving into view
-    animation-name: moveFromRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 3.2s;
-    animation-fill-mode: backwards;
-  }
+  //   // the heading moving into view
+  //   animation-name: moveFromRight;
+  //   animation-duration: 1s;
+  //   animation-timing-function: ease-out;
+  //   animation-delay: 3.2s;
+  //   animation-fill-mode: backwards;
+  // }
 }
 
 // the moving  messages from under the heading
@@ -81,12 +81,54 @@
 
     &--1 {
       transition: all 3s;
-      animation: moveFromLeft 5s ease-out 4s;
+      animation: moveFromLeft 5s ease-out 7.5s;
     }
     &--2 {
       transition: all 3s;
-      animation: moveFromRight 5s ease-out 4s;
+      animation: moveFromRight 5s ease-out 10s;
       align-self: end;
     }
   }
+}
+
+.heading {
+  font-size: 10rem;
+  font-weight: 100;
+  position: relative;
+  grid-row: 4 / 5;
+  grid-column: 2 / 10;
+  z-index: 10;
+  color: $color-font-2;
+  font-family: "Josefin Sans", sans-serif;
+
+  // the undeline from the heading
+  // animating the ::after so it appears from left.
+  // need the animation-fill-mode set to backwards
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid $color-primary-1;
+    height: 100%;
+    width: 100%;
+    animation: moveLine 1s ease-out 3.5s;
+    animation-fill-mode: backwards;
+  }
+  line-height: 1;
+}
+
+//// the animations that go passed in to JS setInterval();
+.heading {
+  .letter {
+    display: inline-block;
+    transform: scale(5) translateX(-50rem) translateY(-50rem);
+    background-color: rgba($color-primary-1, 1);
+    transition: all 1s;
+  }
+}
+
+.letter.fade {
+  background-color: transparent;
+  transform: scale(1) translateX(0) translateY(0);
 }

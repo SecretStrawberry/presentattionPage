@@ -1,5 +1,10 @@
 .logo {
   &--header {
+    animation-name: moveFromLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 5s;
+    animation-fill-mode: backwards;
   }
 
   align-self: center;

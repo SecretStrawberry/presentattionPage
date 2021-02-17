@@ -1,7 +1,7 @@
 "use strict";
 
 //////////////////////////////////////////////////
-//Navigation
+// NAVIGATON
 const header = document.querySelector(".header");
 const nav = document.querySelector(".navigation");
 const navHeight = nav.getBoundingClientRect().height;
@@ -49,7 +49,7 @@ linkTheLinks(porotfolioLink, porotfolioSection);
 linkTheLinks(contactLink, contactSection);
 
 /////////////////////////////////////////////////
-//reveal sections
+// REVEAL SECTIONS
 // we just need to call the function giving arguments as strings:
 // 1. the section (css class) that we need to reveal
 // 2. and the the element (css class) that performs the animation
@@ -90,3 +90,25 @@ revealSections(".contact", "footer--hidden");
 
 ///////////////////////////////////////////
 // HEADING effect
+const textWrap = document.querySelector(".heading");
+textWrap.innerHTML = textWrap.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
+const letters = document.querySelectorAll(".letter");
+
+let char = 0;
+let timer = setInterval(myAnimation, 100);
+
+function myAnimation() {
+  const letter = document.querySelectorAll(".letter")[char];
+  letter.classList.add("fade");
+  char++;
+  if (char === letters.length) complete();
+  return;
+}
+
+function complete() {
+  clearInterval(timer);
+  timer = null;
+}

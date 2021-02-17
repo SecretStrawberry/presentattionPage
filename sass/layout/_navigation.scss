@@ -1,10 +1,4 @@
 .navigation {
-  animation-name: moveFromLeft;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  animation-delay: 0.2s;
-  animation-play-state: initial;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -13,5 +7,5 @@
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  background-color: rgba($color-font-grey-1, 0.2);
+  background-color: transparent;
 }
