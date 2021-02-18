@@ -81,11 +81,11 @@
 
     &--1 {
       transition: all 3s;
-      animation: moveFromLeft 5s ease-out 7.5s;
+      animation: moveFromLeft 5s ease-out 5s;
     }
     &--2 {
       transition: all 3s;
-      animation: moveFromRight 5s ease-out 10s;
+      animation: moveFromRight 5s ease-out 7.5s;
       align-self: end;
     }
   }
@@ -112,7 +112,7 @@
     border-bottom: 2px solid $color-primary-1;
     height: 100%;
     width: 100%;
-    animation: moveLine 1s ease-out 3.5s;
+    animation: moveLine 1s ease-out 2s;
     animation-fill-mode: backwards;
   }
   line-height: 1;
@@ -122,13 +122,14 @@
 .heading {
   .letter {
     display: inline-block;
+    border: 2px;
     transform: scale(5) translateX(-50rem) translateY(-50rem);
     background-color: rgba($color-primary-1, 1);
-    transition: all 1s;
   }
 }
 
 .letter.fade {
+  transition: all 1s;
   background-color: transparent;
   transform: scale(1) translateX(0) translateY(0);
 }

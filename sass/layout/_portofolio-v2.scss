@@ -14,7 +14,10 @@
   transition: all 1s, opacity 1s;
   row-gap: 2rem;
   column-gap: 4rem;
+
   position: relative;
+
+  backface-visibility: hidden;
 
   &__images {
     transition: all 1s;
@@ -65,16 +68,18 @@
   }
 
   &__text-content {
+    position: relative;
     grid-row: row-start 1 / row-end 3;
     grid-column: col-start 3 / col-end 4;
     padding: 2rem 5rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     @include boxShadowLighter;
+    border-radius: 2px;
 
     h2 {
       text-align: center;

@@ -1,21 +1,37 @@
-.section--hidden {
-  opacity: 0;
-  transform: translateY(10rem);
-}
-
-.story--hidden {
-  opacity: 0;
-  transform: translateX(-50rem);
-}
-
-.footer--hidden {
-  opacity: 0;
-  transform: translateX(-50rem);
-}
-
+/// NAVIGATION STICKY
 .sticky {
   background-color: rgba($color-font-grey-1, 0.9);
   position: fixed;
   width: 100%;
   animation: animateNav 0.5s ease-in-out;
+}
+
+/// HEADER section
+.section--hidden {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+
+/// PORTOFOLIO section
+.story--hidden {
+  opacity: 0;
+  transform: translateX(-50rem);
+}
+
+/// PORTOFOLIO text part
+
+.text-hidden {
+  opacity: 0;
+}
+
+.text-animated {
+  animation: fadeInText;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+/// FOOTER section
+.footer--hidden {
+  opacity: 0;
+  transform: translateX(-50rem);
 }

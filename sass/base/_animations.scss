@@ -147,3 +147,25 @@
     opacity: 1;
   }
 }
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: scale(0.1) translateX(-200rem) translateY(-150rem);
+    filter: blur(3px);
+    background-color: $color-font-grey-1;
+    border-radius: 40rem 20rem 80rem / 10rem 70rem;
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0) translateY(0);
+    filter: blur(0);
+    background-color: transparent;
+    border-radius: 2px;
+  }
+}
