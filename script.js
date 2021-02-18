@@ -131,7 +131,7 @@ heading.addEventListener("mouseover", function () {
       Math.floor(Math.random() * 40) - 20
     }rem) translateX(${
       Math.floor(Math.random() * 40) - 20
-    }rem) rotateY(360deg)`;
+    }rem) rotateY(540deg)`;
   });
 });
 
