@@ -129,14 +129,16 @@ heading.addEventListener("mouseover", function () {
   letter.forEach(function (elem) {
     elem.style.transform = `translateY(${
       Math.floor(Math.random() * 40) - 20
-    }rem) translateX(${Math.floor(Math.random() * 40) - 20}rem)`;
+    }rem) translateX(${
+      Math.floor(Math.random() * 40) - 20
+    }rem) rotateY(360deg)`;
   });
 });
 
 heading.addEventListener("mouseout", function () {
   const letter = document.querySelectorAll(".letter");
   letter.forEach(function (elem) {
-    elem.style.transform = "translateY(0) translateX(0) ";
+    elem.style.transform = "translateY(0) translateX(0) rotateY(-360deg) ";
   });
 });
 
