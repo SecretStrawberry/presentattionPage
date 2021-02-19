@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  position: relative;
 
   grid-row: row-end 1 / row-start 2;
   display: grid;
@@ -31,7 +32,7 @@
     transition: all 3s, opacity 3s;
   }
 
-  /// common properties of the squares in the story section
+  ///TECHNOLOGIES common properties of the squares in the story section
   &__technologies,
   &__knowledge,
   &__tools {
@@ -48,12 +49,9 @@
     grid-template-columns: minmax(min-content, 1fr);
     transition: all 0.2s;
 
-    // hover effect moving up and to the tight
-    &:hover,
-    &:focus {
-      transform: translateY(-1rem) translateX(1rem);
-      @include boxShadowDark;
-    }
+    backface-visibility: hidden;
+
+    //hover effect moving up and to the tight
 
     // unordered list container so I can center the ul and li
     &__list-container {
@@ -100,3 +98,26 @@
     border-radius: 2px;
   }
 }
+
+// .tech {
+//   position: relative;
+// }
+
+// .tech-container::before,
+// .tech-container::after {
+//   content: "";
+//   position: absolute;
+//   top: 80%;
+//   left: 1rem;
+
+//   bottom: 2rem;
+//   width: 95%;
+
+//   box-shadow: 0 1.5rem 1rem $color-font-2;
+//   transform: rotate(-3deg);
+//   z-index: -1;
+// }
+
+// .tech-container::after {
+//   transform: rotate(3deg);
+// }

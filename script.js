@@ -9,9 +9,13 @@ const nav = document.querySelector(".navigation");
 
 //sections selectors
 const headerSection = document.querySelector(".header");
+
 const porotfolioSection = document.querySelector(".portofolio");
 const portofolioText = document.querySelector(".portofolio__text-content");
+
 const aboutSection = document.querySelector(".story");
+const technologies = document.querySelectorAll(".tech");
+
 const contactSection = document.querySelector(".contact");
 
 //////////////////////////////////////////////////
@@ -78,19 +82,19 @@ const revealSections = function (
 };
 
 ////////////////////////////////////////////////
-// reveal portofolio
+// REVEAL PORTOFOLIO
 // section--hidden is found in _sections.scss
 revealSections(".section", "section--hidden", 0.15);
 
 ///////////////////////////////////////////////////
 
 ////////////////////////////////////////////////
-// reveal story
+// REVEAL STORY
 // story--hidden is found in _sections.scss
 revealSections(".story", "story--hidden", 0.15);
 
 ////////////////////////////////////////////////
-// reveal footer
+// REVEAL FOOTER
 // footer--hidden is found in _sections.scss
 revealSections(".contact", "footer--hidden", 0.15);
 
@@ -120,27 +124,32 @@ function complete() {
 }
 
 //////////////////////////////////////
-// HEADING randomly disperse on hover
+// HEADING randomly disperse on hover,
+// I`ve donde this in a function so I can call setTimeout on it
+// so it will not interact with the heading effect while is running.
+const letterDisperse = function () {
+  const heading = document.querySelector(".heading");
 
-const heading = document.querySelector(".heading");
-
-heading.addEventListener("mouseover", function () {
-  const letter = document.querySelectorAll(".letter");
-  letter.forEach(function (elem) {
-    elem.style.transform = `translateY(${
-      Math.floor(Math.random() * 40) - 20
-    }rem) translateX(${
-      Math.floor(Math.random() * 40) - 20
-    }rem) rotateY(540deg)`;
+  heading.addEventListener("mouseover", function () {
+    const letter = document.querySelectorAll(".letter");
+    letter.forEach(function (elem) {
+      elem.style.transform = `translateY(${
+        Math.floor(Math.random() * 40) - 20
+      }rem) translateX(${
+        Math.floor(Math.random() * 40) - 20
+      }rem) rotateY(540deg)`;
+    });
   });
-});
 
-heading.addEventListener("mouseout", function () {
-  const letter = document.querySelectorAll(".letter");
-  letter.forEach(function (elem) {
-    elem.style.transform = "translateY(0) translateX(0) rotateY(-360deg) ";
+  heading.addEventListener("mouseout", function () {
+    const letter = document.querySelectorAll(".letter");
+    letter.forEach(function (elem) {
+      elem.style.transform = "translateY(0) translateX(0) rotateY(-360deg) ";
+    });
   });
-});
+};
+
+setTimeout(letterDisperse, 2700);
 
 /////////////////////////////////////////////
 // PORTOFOLIO text anmimation
@@ -163,3 +172,30 @@ const portofolioTextObserver = new IntersectionObserver(revealText, {
 
 portofolioTextObserver.observe(portofolioText);
 portofolioText.classList.add("text-hidden");
+
+///////////////////////////////////////////////////////
+///STORY TECHNOLOGIES animations
+// tech--hidden & tech--reveal can be founs in _section.scss
+
+const revealTech = function (entries, observer) {
+  const [entry] = entries;
+  // I`ve choose to check if just one of the entries (entry) is intersecting
+  // because all entries are in the same line of intersection with the viewport
+  if (!entry.isIntersecting) return;
+  else {
+    entries.forEach(function (entry) {
+      entry.target.classList.remove("tech--hidden");
+      entry.target.classList.add("tech--reveal");
+    });
+  }
+};
+
+const techObserver = new IntersectionObserver(revealTech, {
+  root: null,
+  threshold: 0.8,
+});
+
+technologies.forEach(function (tech) {
+  techObserver.observe(tech);
+  tech.classList.add("tech--hidden");
+});

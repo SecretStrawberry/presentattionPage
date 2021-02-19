@@ -1,3 +1,4 @@
+///// LOGO icon moving continuously behind logo
 @keyframes moveLogoIcon {
   0% {
     opacity: 0;
@@ -15,6 +16,32 @@
   }
 }
 
+//// NAVIGATION when becomes sticky is coming into screen slowly from top to bottom
+@keyframes animateNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+////// HEADING pink line comming from left under "Web design Services"
+@keyframes moveLine {
+  0% {
+    opacity: 0;
+    transform: translatex(-100rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+///// LOGO, NAVIGATION links, MESSAGES in header "No strawberrys wher hurt..."
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -31,6 +58,7 @@
   }
 }
 
+///// MESSAGES in header "This site was not tested ....."
 @keyframes moveFromRight {
   0% {
     opacity: 0;
@@ -47,74 +75,7 @@
   }
 }
 
-//good
-@keyframes moveFromDownRight {
-  0% {
-    opacity: 0;
-    transform: translateY(50rem) translateX(15rem);
-  }
-
-  80% {
-    transform: translateY(-5rem) translateX(-5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
-  }
-}
-
-// good
-@keyframes appearFromBottom {
-  0% {
-    transform: translateY(25rem);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-// good
-@keyframes moveFromLeftWelcome {
-  0% {
-    opacity: 1;
-    transform: translateX(-170rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-//good
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(-3rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes moveLine {
-  0% {
-    opacity: 0;
-    transform: translatex(-100rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
+///// BUTTONS in the header the white ones "See the portofolio" & "Read about it"
 @keyframes appear {
   0% {
     opacity: 0;
@@ -127,27 +88,20 @@
   }
 }
 
-@keyframes animateNav {
+//BUTTON in the portofolio section
+@keyframes moveInButton {
   0% {
     opacity: 0;
-    transform: translateY(-5rem);
+    transform: translateY(-3rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
+////////// PORTOFOLIO TEXT
 @keyframes fadeInText {
   0% {
     opacity: 0;
@@ -167,5 +121,27 @@
     filter: blur(0);
     background-color: transparent;
     border-radius: 2px;
+  }
+}
+
+//////// STORY TECHNOLOGIES
+
+@keyframes tech {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  80% {
+    transform: rotate(-360deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
