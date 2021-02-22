@@ -10,7 +10,7 @@
     transition: all 0.2s;
     position: relative;
     border: none;
-    @include boxShadowLighter;
+    @include boxShadowLight;
     cursor: pointer;
   }
   // hover in preparing of the animation moving little up and enlarge

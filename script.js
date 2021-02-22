@@ -84,7 +84,7 @@ const revealSections = function (
 ////////////////////////////////////////////////
 // REVEAL PORTOFOLIO
 // section--hidden is found in _sections.scss
-revealSections(".section", "section--hidden", 0.15);
+revealSections(".section", "section--hidden", 0.25);
 
 ///////////////////////////////////////////////////
 
@@ -155,23 +155,23 @@ setTimeout(letterDisperse, 2700);
 // PORTOFOLIO text anmimation
 // text-hidden & text-animated can be found in _sections.scss
 
-const revealText = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  else {
-    entry.target.classList.remove("text-hidden");
-    entry.target.classList.add("text-animated");
-  }
-  observer.unobserve(entry.target);
-};
+// const revealText = function (entries, observer) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) return;
+//   else {
+//     entry.target.classList.remove("text-hidden");
+//     entry.target.classList.add("text-animated");
+//   }
+//   observer.unobserve(entry.target);
+// };
 
-const portofolioTextObserver = new IntersectionObserver(revealText, {
-  root: null,
-  threshold: 0.7,
-});
+// const portofolioTextObserver = new IntersectionObserver(revealText, {
+//   root: null,
+//   threshold: 0.7,
+// });
 
-portofolioTextObserver.observe(portofolioText);
-portofolioText.classList.add("text-hidden");
+// portofolioTextObserver.observe(portofolioText);
+// portofolioText.classList.add("text-hidden");
 
 ///////////////////////////////////////////////////////
 ///STORY TECHNOLOGIES animations

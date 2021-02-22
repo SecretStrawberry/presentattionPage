@@ -1,16 +1,38 @@
 .logo {
+  align-self: center;
+  justify-self: start;
+
+  transition: all 0.2s;
+
   &--header {
     animation-name: moveFromLeft;
     animation-duration: 3s;
     animation-timing-function: ease-out;
     animation-delay: 3s;
     animation-fill-mode: backwards;
+
+    &__span1 {
+      color: $color-font-2;
+    }
+    &__span2 {
+      color: $color-primary-1;
+    }
+
+    sub {
+      font-size: 2rem;
+      color: $color-font-2;
+    }
   }
 
-  align-self: center;
-  justify-self: start;
+  &--footer {
+    &__span1 {
+      color: $color-primary-1;
+    }
 
-  transition: all 0.2s;
+    &__span2 {
+      color: rgba($color-primary-1, 1);
+    }
+  }
 
   &__icon {
     position: absolute;

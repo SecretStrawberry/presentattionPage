@@ -4,11 +4,11 @@
     display: flex;
     align-items: center;
     height: 100%;
+    color: $color-font-2;
 
     &:link,
     &:visited {
       text-decoration: none;
-      color: $color-font-2;
     }
   }
 
