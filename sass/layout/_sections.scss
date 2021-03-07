@@ -31,17 +31,17 @@
 }
 
 /// STORY reveal technologies
-.tech--hidden {
-  opacity: 0;
-}
+// .tech--hidden {
+//   opacity: 0;
+// }
 
-.tech--reveal {
-  animation: tech;
-  animation-duration: 3s;
-  animation-delay: 0.2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
-}
+// .tech--reveal {
+//   animation: tech;
+//   animation-duration: 3s;
+//   animation-delay: 0.2s;
+//   animation-timing-function: ease-in-out;
+//   animation-fill-mode: backwards;
+// }
 
 /// FOOTER section
 .footer--hidden {

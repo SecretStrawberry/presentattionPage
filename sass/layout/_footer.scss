@@ -24,21 +24,22 @@
 
   &__social {
     grid-column: col-start 4 / col-end 4;
+    justify-self: center;
+    align-self: center;
     ul {
       list-style: none;
-      li {
+      li a {
         display: flex;
         align-items: center;
       }
     }
-    justify-self: center;
-    align-self: center;
   }
 
   &__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     fill: $color-font-grey;
+    margin-right: 2rem;
   }
 }
 
@@ -46,13 +47,12 @@
   grid-column: col-start 2 / col-end 3;
   justify-self: center;
   position: relative;
+  transition: all 0.2s;
 
   cursor: pointer;
-  a {
-    &:link,
-    &:visited {
-      text-decoration: none;
-    }
+
+  &:hover {
+    transform: rotate(5deg);
   }
 }
 

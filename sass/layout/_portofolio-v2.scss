@@ -6,13 +6,13 @@
       [row-start] minmax(min-content, 1fr) [row-end]
     );
   grid-template-columns:
-    minmax(min-content, max-content) repeat(
+    minmax(2rem, 10rem) repeat(
       4,
       [col-start] minmax(min-content, 1fr) [col-end]
     )
-    minmax(min-content, max-content);
+    minmax(2rem, 10rem);
   row-gap: 2rem;
-  column-gap: 4rem;
+  column-gap: 2rem;
 
   position: relative;
 
@@ -26,7 +26,8 @@
     @include boxShadowLight;
     border-radius: 2px;
 
-    background-color: rgba(0, 0, 0, 0.8);
+    // for blurring effect on top of the picture, img beeing little bit transparent
+    background-color: rgba ($color-font-grey-1, 1);
     overflow: hidden;
 
     // box surrounding the pics in the portoflio

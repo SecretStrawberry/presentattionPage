@@ -79,19 +79,20 @@
   &:visited {
     position: relative;
     text-decoration: none;
-    padding: 1.5rem 4rem;
 
-    width: 25rem;
+    padding: 1rem 0;
+
+    width: 15rem;
 
     font-size: 2rem;
     font-weight: 400;
 
-    border-radius: 1rem;
-    border: 2px;
-
     background-color: transparent;
-
+    border: none;
     transition: all 0.2s;
+
+    /// INSET SHADOW THAT RETRACTS ON HOVER IN THE MARGINS EFFECT
+    @include shadowWhite;
   }
 
   &--white {
@@ -101,19 +102,40 @@
     animation-fill-mode: backwards;
 
     color: $color-font-2;
-    border-color: $color-font-2;
-    box-shadow: 0 0 40rem 40rem $color-font-grey-1 inset,
-      0 0 0 0 $color-font-grey-1;
+
+    border-radius: 1rem;
+
     &:hover {
       box-shadow: 0 0 1rem 0 $color-font-grey-1 inset,
         0 0 1rem 0.4rem $color-font-grey-1;
       color: $color-font-grey-1;
 
+      border: none;
+
       transform: translateY(-3px);
     }
+
+    /// remove text decoration form --pink modifier button "Conatct me"
+    &:hover.button-header--pink {
+      text-decoration: none;
+    }
+
+    &:focus {
+      // to remove the standard border from chrome
+      outline: none;
+    }
+
     &:active {
+      border-style: none; // to remove the standard border from chrome
       transform: translateY(1px);
       color: $color-primary-1;
     }
+  }
+
+  /// UNDERLINE FOR THE BUTTON
+
+  &--pink {
+    text-decoration: underline 1px $color-primary-1;
+    text-underline-offset: 0.2em;
   }
 }

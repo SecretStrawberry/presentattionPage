@@ -21,53 +21,27 @@
   grid-template-columns: repeat(10, minmax(min-content, 1fr));
   grid-template-rows: repeat(8, minmax(min-content, 1fr));
   justify-items: center;
-  align-items: center;
+  align-items: end;
 
   backface-visibility: hidden;
 
   &__button {
     &--1,
     &--2 {
-      grid-row: 7 / 8;
+      grid-row: 5 / 7;
+      align-self: center;
     }
 
     &--1 {
-      grid-column: 3 / 5;
+      justify-self: end;
+      grid-column: 4 / 5;
     }
+
     &--2 {
-      grid-column: 7 / 9;
+      justify-self: start;
+      grid-column: 7 / 8;
     }
   }
-
-  // &__heading-1 {
-  //   position: relative;
-  //   grid-row: 4 / 5;
-  //   grid-column: 2 / 10;
-  //   z-index: 10;
-  //   color: $color-font-2;
-  //   // the undeline from the heading
-  //   // animating the ::after so it appears from left.
-  //   // need the animation-fill-mode set to backwards
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     border-bottom: 2px solid $color-primary-1;
-  //     height: 100%;
-  //     width: 100%;
-  //     animation: moveLine 1s ease-out 3.5s;
-  //     animation-fill-mode: backwards;
-  //   }
-  //   line-height: 1;
-
-  //   // the heading moving into view
-  //   animation-name: moveFromRight;
-  //   animation-duration: 1s;
-  //   animation-timing-function: ease-out;
-  //   animation-delay: 3.2s;
-  //   animation-fill-mode: backwards;
-  // }
 }
 
 // the moving  messages from under the heading
@@ -83,6 +57,7 @@
     &--1 {
       transition: all 3s;
       animation: moveFromLeft 5s ease-out 5s;
+      align-self: center;
     }
     &--2 {
       transition: all 3s;
@@ -93,14 +68,15 @@
 }
 
 .heading {
-  font-size: 10rem;
+  font-size: 9rem;
   font-weight: 100;
   position: relative;
-  grid-row: 4 / 5;
-  grid-column: 2 / 10;
+  grid-row: 3 / 5;
+  grid-column: 3 / 9;
   z-index: 10;
   color: $color-font-2;
   font-family: "Josefin Sans", sans-serif;
+  align-self: center;
 
   // the undeline from the heading
   // animating the ::after so it appears from left.

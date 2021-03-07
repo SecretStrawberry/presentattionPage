@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- favicon -->
     <link
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
@@ -28,7 +34,6 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <title>SecretStrawberry</title>
-    <script defer src="script.js"></script>
   </head>
   <body class="container">
     <nav class="navigation">
@@ -91,12 +96,13 @@
       <button
         class="button-header button-header--white header__button--1 portofolio-link"
       >
-        See the Portofolio
+        My work
       </button>
+
       <button
-        class="button-header button-header--white header__button--2 about-link"
+        class="button-header button-header--white button-header--pink header__button--2 contact-link"
       >
-        Read about it
+        Contact me
       </button>
     </header>
 
@@ -212,47 +218,48 @@
         <a href="#cnt" class="text-link">message</a>.
       </p>
 
-      <div class="tech story__technologies">
-        <div class="tech-container">
-          <h5>Technologies</h5>
-          <div class="story__knowledge__list-container">
-            <ul>
-              <li>CSS3</li>
-              <li>HTML5</li>
-              <li>JavaScript</li>
-            </ul>
+      <div class="all-technologies">
+        <div class="tech story__technologies">
+          <div class="tech-container">
+            <h5>Technologies</h5>
+            <div class="story__knowledge__list-container">
+              <ul>
+                <li>CSS3</li>
+                <li>HTML5</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech story__knowledge">
+          <div class="tech-container">
+            <h5>Knowledge</h5>
+            <div class="story__knowledge__list-container">
+              <ul>
+                <li>Ruby</li>
+                <li>Ruby on Rails</li>
+                <li>eRuby</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech story__tools">
+          <div class="tech-container">
+            <h5>Tools</h5>
+            <div class="story__knowledge__list-container">
+              <ul>
+                <li>Gimp</li>
+                <li>AWS</li>
+                <li>Heroku</li>
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="tech story__knowledge">
-        <div class="tech-container">
-          <h5>Knowledge</h5>
-          <div class="story__knowledge__list-container">
-            <ul>
-              <li>Ruby</li>
-              <li>Ruby on Rails</li>
-              <li>eRuby</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="tech story__tools">
-        <div class="tech-container">
-          <h5>Tools</h5>
-          <div class="story__knowledge__list-container">
-            <ul>
-              <li>Gimp</li>
-              <li>AWS</li>
-              <li>Heroku</li>
-              <li>Git</li>
-              <li>GitHub</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       <picture class="story__picture">
         <img src="/img/profile.jpg" alt="Picture of Horia" class="story__img" />
       </picture>
@@ -281,46 +288,49 @@
       <div class="contact__social">
         <ul>
           <li>
-            <svg class="contact__icon">
-              <use xlink:href="img/footer_sprite.svg#icon-twitter"></use>
-            </svg>
             <a
               href="https://twitter.com/Horia03933048"
               class="footer-links"
               target="_blank"
+              ><svg class="contact__icon contact__icon--1">
+                <use xlink:href="img/footer_sprite.svg#icon-twitter"></use></svg
               >Twitter</a
             >
           </li>
           <li>
-            <svg class="contact__icon">
-              <use xlink:href="img/footer_sprite.svg#icon-facebook"></use>
-            </svg>
             <a
               href="https://www.facebook.com/SecretStrawberryWebSerices"
               class="footer-links"
               target="_blank"
+              ><svg class="contact__icon contact__icon--2">
+                <use
+                  xlink:href="img/footer_sprite.svg#icon-facebook"
+                ></use></svg
               >Facebook</a
             >
           </li>
           <li>
-            <svg class="contact__icon">
-              <use xlink:href="img/footer_sprite.svg#icon-linkedin2"></use>
-            </svg>
             <a
               href="https://www.linkedin.com/in/viorel-horia-surdu-202b601ab/"
               class="footer-links"
               target="_blank"
+              ><svg class="contact__icon contact__icon--3">
+                <use
+                  xlink:href="img/footer_sprite.svg#icon-linkedin2"
+                ></use></svg
               >linkedIn</a
             >
           </li>
           <li>
-            <svg class="contact__icon">
-              <use xlink:href="img/footer_sprite.svg#icon-instagram"></use>
-            </svg>
             <a
               href="https://www.instagram.com/surduhoria/"
               class="footer-links"
               target="_blank"
+            >
+              <svg class="contact__icon contact__icon--4">
+                <use
+                  xlink:href="img/footer_sprite.svg#icon-instagram"
+                ></use></svg
               >Instagram</a
             >
           </li>
@@ -368,5 +378,6 @@
         in me and supported me.
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

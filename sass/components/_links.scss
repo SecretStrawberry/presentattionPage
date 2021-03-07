@@ -1,3 +1,6 @@
+////////////////////////////////////////
+// NAVIGATION
+////////////////////////////////////////
 .navigation {
   &__link {
     cursor: pointer;
@@ -42,33 +45,37 @@
   }
 }
 
-.link {
-  &:link,
-  &:visited {
-    display: inline-block;
-    padding: 1rem 2rem;
-    color: $color-font-2;
-    text-decoration: none;
+// .link {
+//   &:link,
+//   &:visited {
+//     display: inline-block;
+//     padding: 1rem 2rem;
+//     color: $color-font-2;
+//     text-decoration: none;
 
-    transition: all 0.2s;
-  }
-  &--make-contact {
-    &:hover,
-    &:focus {
-      border-radius: 2px;
-      @include boxShadowLight;
-      transform: rotate(-5deg) scale(1.2);
-      color: $color-primary-1;
-    }
-  }
-}
+//     transition: all 0.2s;
+//   }
+//   &--make-contact {
+//     &:hover,
+//     &:focus {
+//       border-radius: 2px;
+//       @include boxShadowLight;
+//       transform: rotate(-5deg) scale(1.2);
+//       color: $color-primary-1;
+//     }
+//   }
+// }
+
+////////////////////////////////////////
+// STORY MESSAGE LINK
+////////////////////////////////////////
 
 .text-link {
   &:link,
   &:visited {
     display: inline-block;
     text-decoration: none;
-    color: currentColor;
+    color: $color-primary-1;
 
     transition: all 0.2s;
   }
@@ -80,12 +87,14 @@
     transform: rotate(5deg) scale(1.2);
   }
 }
-
+////////////////////////////////////////
+// FOOTER
+////////////////////////////////////////
 .footer-links {
   &:link,
   &:visited {
-    display: inline-block;
-    padding: 0.5rem 1rem;
+    // display: inline-block;
+    padding: 1rem 2rem;
     border-radius: 2px;
 
     font-size: 2rem;
@@ -99,6 +108,21 @@
     transform: translatex(3rem) translateY(-0.5rem);
     background-color: rgba($color-primary-1, 0.7);
     @include boxShadowDark;
+    .contact__icon--1 {
+      fill: #1da1f2;
+    }
+
+    .contact__icon--2 {
+      fill: #1877f2;
+    }
+
+    .contact__icon--3 {
+      fill: #0a66c2;
+    }
+
+    .contact__icon--4 {
+      fill: #ffdc7d;
+    }
   }
 
   &:active {
@@ -107,6 +131,7 @@
   }
 }
 
+////  links from special thanks
 .footer-name-link {
   &:link,
   &:visited {

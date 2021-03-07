@@ -26,5 +26,7 @@ body {
       [row-start] min-content [row-end]
     );
   grid-template-columns: 100%;
+  // background-color: #0e3a77;
+  // background-color: $color-font-2;
   background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/vintage-concrete.png");
 }

@@ -177,25 +177,25 @@ setTimeout(letterDisperse, 2700);
 ///STORY TECHNOLOGIES animations
 // tech--hidden & tech--reveal can be founs in _section.scss
 
-const revealTech = function (entries, observer) {
-  const [entry] = entries;
-  // I`ve choose to check if just one of the entries (entry) is intersecting
-  // because all entries are in the same line of intersection with the viewport
-  if (!entry.isIntersecting) return;
-  else {
-    entries.forEach(function (entry) {
-      entry.target.classList.remove("tech--hidden");
-      entry.target.classList.add("tech--reveal");
-    });
-  }
-};
+// const revealTech = function (entries, observer) {
+//   const [entry] = entries;
+//   // I`ve choose to check if just one of the entries (entry) is intersecting
+//   // because all entries are in the same line of intersection with the viewport
+//   if (!entry.isIntersecting) return;
+//   else {
+//     entries.forEach(function (entry) {
+//       entry.target.classList.remove("tech--hidden");
+//       entry.target.classList.add("tech--reveal");
+//     });
+//   }
+// };
 
-const techObserver = new IntersectionObserver(revealTech, {
-  root: null,
-  threshold: 0.8,
-});
+// const techObserver = new IntersectionObserver(revealTech, {
+//   root: null,
+//   threshold: 0.8,
+// });
 
-technologies.forEach(function (tech) {
-  techObserver.observe(tech);
-  tech.classList.add("tech--hidden");
-});
+// technologies.forEach(function (tech) {
+//   techObserver.observe(tech);
+//   tech.classList.add("tech--hidden");
+// });

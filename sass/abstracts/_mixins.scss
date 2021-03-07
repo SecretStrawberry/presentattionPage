@@ -1,7 +1,7 @@
 // shadows
 
-@mixin shadowStrawberry {
-  box-shadow: 0 5rem 10rem rgba(#e8004a, 1);
+@mixin shadowWhite {
+  box-shadow: 0 5rem 10rem rgba(#f7f1e3, 0.5) inset;
 }
 
 @mixin boxShadowLighter {
