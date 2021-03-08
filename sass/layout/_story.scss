@@ -18,7 +18,7 @@
     [pic-start] minmax(min-content, 1fr) [pic-end] minmax(2rem, 10rem);
   gap: 2rem;
 
-  transition: all 3s, opacity 3s;
+  transition: all 0.5s;
 
   // the main text in story section
   &__hello {

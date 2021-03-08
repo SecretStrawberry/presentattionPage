@@ -100,18 +100,6 @@ body {
     background-color: transparent;
     border-radius: 2px; } }
 
-@keyframes tech {
-  0% {
-    opacity: 0;
-    transform: scale(0.1); }
-  50% {
-    transform: rotate(360deg); }
-  80% {
-    transform: rotate(-360deg); }
-  100% {
-    opacity: 1;
-    transform: scale(1); } }
-
 .container {
   font-family: "Lato", sans-serif;
   font-size: 1.4rem;
@@ -248,7 +236,7 @@ body {
 .button-header--white {
   animation-name: appear;
   animation-duration: 2s;
-  animation-delay: 10s;
+  animation-delay: 4s;
   animation-fill-mode: backwards;
   color: #03224c;
   border-radius: 1rem; }
@@ -364,7 +352,7 @@ body {
   background-color: transparent; }
   .navigation__link {
     animation-name: moveFromLeft;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-delay: 3s;
     animation-fill-mode: backwards; }
@@ -416,15 +404,23 @@ body {
   justify-items: center;
   align-items: end;
   backface-visibility: hidden; }
-  .header__button--1, .header__button--2 {
-    grid-row: 5 / 7;
-    align-self: center; }
-  .header__button--1 {
-    justify-self: end;
-    grid-column: 4 / 5; }
   .header__button--2 {
-    justify-self: start;
-    grid-column: 7 / 8; }
+    grid-row: 7 / 9;
+    grid-column: 5 / 7;
+    justify-self: center;
+    align-self: center; }
+  .header__slogan {
+    position: relative;
+    align-items: center;
+    grid-row: 5 / 6;
+    grid-column: 3 / 9;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #03224c;
+    animation: moveFromLeft;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: backwards; }
 
 .header__message {
   justify-content: center;
@@ -482,7 +478,7 @@ body {
   font-family: "Josefin Sans", sans-serif; }
   .logo--header {
     animation-name: moveFromLeft;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-delay: 3s;
     animation-fill-mode: backwards; }
@@ -518,7 +514,7 @@ body {
   column-gap: 2rem;
   position: relative;
   backface-visibility: hidden;
-  transition: all 3s, opacity 3s; }
+  transition: all 0.5s; }
   .portofolio__images {
     transition: all 1s;
     overflow: hidden;
@@ -580,7 +576,7 @@ body {
   grid-template-rows: minmax(2rem, 15rem) repeat(6, [row-start] minmax(min-content, 1fr) [row-end]) minmax(2rem, 15rem);
   grid-template-columns: minmax(2rem, 10rem) repeat(3, [p-start] minmax(min-content, 1fr) [p-end]) [pic-start] minmax(min-content, 1fr) [pic-end] minmax(2rem, 10rem);
   gap: 2rem;
-  transition: all 3s, opacity 3s; }
+  transition: all 0.5s; }
   .story__hello {
     grid-row: row-start 1 / row-end 4;
     grid-column: p-start 1 / p-end 3;
@@ -643,7 +639,7 @@ body {
   display: grid;
   grid-template-rows: repeat(2, minmax(min-content, 1fr)) minmax(2rem, 10rem);
   grid-template-columns: repeat(4, [col-start] minmax(min-content, 1fr) [col-end]);
-  transition: all 2s, opacity 2s; }
+  transition: all 0.5s; }
   .contact__container {
     grid-column: col-start 1 / col-end 1;
     color: #f6f6f6;
