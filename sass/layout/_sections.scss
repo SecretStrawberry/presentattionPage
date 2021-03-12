@@ -20,12 +20,20 @@
 .section--hidden {
   opacity: 0;
   transform: translateX(-50rem);
+  @media only screen and (max-width: $bp-smallerest) {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /// PORTOFOLIO section
 .story--hidden {
   opacity: 0;
   transform: translateX(-50rem);
+  @media only screen and (max-width: $bp-smallerest) {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /// PORTOFOLIO text part
@@ -44,4 +52,8 @@
 .footer--hidden {
   opacity: 0;
   transform: translateX(-50rem);
+  @media only screen and (max-width: $bp-smallerest) {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
