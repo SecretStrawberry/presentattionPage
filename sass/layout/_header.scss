@@ -86,15 +86,17 @@
   align-self: center;
 
   @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    font-size: 10rem;
+  }
+  @media only screen and (max-width: $bp-smallerest-small) {
+    grid-column: 1 / -1;
     font-size: 8rem;
   }
 
-  @media only screen and (max-width: $bp-smaller) {
-    font-size: 6rem;
-  }
-
   @media only screen and (max-width: $bp-smallerest-smaller) {
-    font-size: 4rem;
+    grid-column: 1 / -1;
+    font-size: 6rem;
     z-index: 1;
   }
 

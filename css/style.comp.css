@@ -41,9 +41,6 @@ body {
   @media only screen and (max-width: 43.75em) {
     .container {
       grid-template-rows: [logo-start] 9rem [logo-end header-start] 40vh [header-end] repeat(3, [row-start] min-content [row-end]); } }
-  @media only screen and (max-width: 31.5em) {
-    .container {
-      grid-template-rows: [logo-start] 9rem [logo-end header-start] 30vh [header-end] repeat(3, [row-start] min-content [row-end]); } }
 
 @keyframes moveLogoIcon {
   0% {
@@ -327,11 +324,11 @@ body {
 @media only screen and (max-width: 40.63em) {
   .navigation__mobile--show {
     display: block;
-    position: fixed;
-    width: 20%;
-    height: 10%;
-    top: 5%;
-    right: 4%; } }
+    position: relative;
+    width: 30%;
+    height: 8rem;
+    margin-top: 11%;
+    margin-right: -2%; } }
 
 .navigation li {
   padding: 0.5rem 1rem;
@@ -351,7 +348,7 @@ body {
       background-color: #f7f1e3;
       font-size: 2rem;
       justify-content: center;
-      border-radius: 2px; } }
+      z-index: 9999; } }
 
 .navigation__icon {
   margin-right: 1rem;
@@ -450,10 +447,18 @@ body {
 .section--hidden {
   opacity: 0;
   transform: translateX(-50rem); }
+  @media only screen and (max-width: 43.75em) {
+    .section--hidden {
+      opacity: 1;
+      transform: translateX(0); } }
 
 .story--hidden {
   opacity: 0;
   transform: translateX(-50rem); }
+  @media only screen and (max-width: 43.75em) {
+    .story--hidden {
+      opacity: 1;
+      transform: translateX(0); } }
 
 .text-hidden {
   opacity: 0; }
@@ -466,6 +471,10 @@ body {
 .footer--hidden {
   opacity: 0;
   transform: translateX(-50rem); }
+  @media only screen and (max-width: 43.75em) {
+    .footer--hidden {
+      opacity: 1;
+      transform: translateX(0); } }
 
 .header::before {
   content: "";
@@ -536,13 +545,17 @@ body {
   line-height: 1; }
   @media only screen and (max-width: 81.25em) {
     .heading {
-      font-size: 8rem; } }
-  @media only screen and (max-width: 50em) {
+      grid-column: 1 / -1;
+      font-size: 10rem; } }
+  @media only screen and (max-width: 40.63em) {
     .heading {
-      font-size: 6rem; } }
+      grid-column: 1 / -1;
+      font-size: 8rem; } }
   @media only screen and (max-width: 31.5em) {
     .heading {
-      font-size: 4rem; } }
+      grid-column: 1 / -1;
+      font-size: 6rem;
+      z-index: 1; } }
   .heading::after {
     content: "";
     position: absolute;
