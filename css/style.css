@@ -347,7 +347,8 @@ body {
       height: 70%;
       background-color: #f7f1e3;
       font-size: 2rem;
-      justify-content: center; } }
+      justify-content: center;
+      z-index: 9999; } }
 
 .navigation__icon {
   margin-right: 1rem;
@@ -550,7 +551,8 @@ body {
       font-size: 6rem; } }
   @media only screen and (max-width: 31.5em) {
     .heading {
-      font-size: 4rem; } }
+      font-size: 4rem;
+      z-index: 1; } }
   .heading::after {
     content: "";
     position: absolute;
