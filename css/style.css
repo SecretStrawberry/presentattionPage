@@ -41,9 +41,6 @@ body {
   @media only screen and (max-width: 43.75em) {
     .container {
       grid-template-rows: [logo-start] 9rem [logo-end header-start] 40vh [header-end] repeat(3, [row-start] min-content [row-end]); } }
-  @media only screen and (max-width: 31.5em) {
-    .container {
-      grid-template-rows: [logo-start] 9rem [logo-end header-start] 30vh [header-end] repeat(3, [row-start] min-content [row-end]); } }
 
 @keyframes moveLogoIcon {
   0% {
