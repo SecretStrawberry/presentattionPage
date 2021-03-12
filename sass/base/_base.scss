@@ -66,11 +66,4 @@ body {
         [row-start] min-content [row-end]
       );
   }
-
-  // @media only screen and (max-width: $bp-smallerest-smaller) {
-  //   grid-template-rows: [logo-start] 9rem [logo-end header-start] 30vh [header-end] repeat(
-  //       3,
-  //       [row-start] min-content [row-end]
-  //     );
-  // }
 }

@@ -35,11 +35,11 @@
     &--show {
       @media only screen and (max-width: $bp-smallerest-small) {
         display: block;
-        position: fixed;
-        width: 20%;
-        height: 10%;
-        top: 5%;
-        right: 4%;
+        position: relative;
+        width: 30%;
+        height: 8rem;
+        margin-top: 11%;
+        margin-right: -2%;
       }
     }
   }
@@ -64,7 +64,6 @@
       background-color: $color-font-grey-1;
       font-size: 2rem;
       justify-content: center;
-      border-radius: 2px;
     }
   }
 
