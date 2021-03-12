@@ -21,6 +21,27 @@
     align-items: center;
 
     list-style: none;
+    @media only screen and (max-width: $bp-smallerest-small) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    &--hidden {
+      @media only screen and (max-width: $bp-smallerest-small) {
+        display: none;
+      }
+    }
+    &--show {
+      @media only screen and (max-width: $bp-smallerest-small) {
+        display: block;
+        position: fixed;
+        width: 20%;
+        height: 10%;
+        top: 5%;
+        right: 4%;
+      }
+    }
   }
 
   li {
@@ -35,6 +56,16 @@
       background-color: rgba($color-primary-2, 1);
       border-radius: 2px;
     }
+
+    @media only screen and (max-width: $bp-smallerest-small) {
+      padding: 0 1rem;
+      width: 100%;
+      height: 70%;
+      background-color: $color-font-grey-1;
+      font-size: 2rem;
+      justify-content: center;
+      border-radius: 2px;
+    }
   }
 
   &__icon {
@@ -42,6 +73,11 @@
     width: 2rem;
     height: 2rem;
     fill: $color-font-2;
+
+    @media only screen and (max-width: $bp-smallerest-small) {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
   }
 }
 

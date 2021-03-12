@@ -9,6 +9,15 @@
 html {
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
   scroll-behavior: smooth;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%; // // 1rem = 8px; 8px/16px = 50%
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 43.75%; // // 1rem = 7px; 7px/16px = 43.75%
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 37.5%; // // 1rem = 6px; 6px/16px = 37.5%
+  }
 }
 
 body {
@@ -29,4 +38,39 @@ body {
   // background-color: #0e3a77;
   // background-color: $color-font-2;
   background-image: url("https://new-presentation.s3.eu-north-1.amazonaws.com/vintage-concrete.png");
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: [logo-start] 9rem [logo-end header-start] 70vh [header-end] repeat(
+        3,
+        [row-start] min-content [row-end]
+      );
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: [logo-start] 9rem [logo-end header-start] 60vh [header-end] repeat(
+        3,
+        [row-start] min-content [row-end]
+      );
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    grid-template-rows: [logo-start] 9rem [logo-end header-start] 50vh [header-end] repeat(
+        3,
+        [row-start] min-content [row-end]
+      );
+  }
+
+  @media only screen and (max-width: $bp-smallerest) {
+    grid-template-rows: [logo-start] 9rem [logo-end header-start] 40vh [header-end] repeat(
+        3,
+        [row-start] min-content [row-end]
+      );
+  }
+
+  @media only screen and (max-width: $bp-smallerest-smaller) {
+    grid-template-rows: [logo-start] 9rem [logo-end header-start] 30vh [header-end] repeat(
+        3,
+        [row-start] min-content [row-end]
+      );
+  }
 }

@@ -8,6 +8,10 @@
   background-size: cover;
   background-position: center;
   display: grid;
+
+  align-items: center;
+  justify-items: center;
+
   grid-template-rows: repeat(2, minmax(min-content, 1fr)) minmax(2rem, 10rem);
   grid-template-columns: repeat(
     4,
@@ -20,12 +24,20 @@
     grid-column: col-start 1 / col-end 1;
     color: $color-font-grey;
     padding: 3rem 6rem;
+    @media only screen and (max-width: $bp-smallerest-small) {
+      grid-column: col-start 1 / col-end 2;
+    }
   }
 
   &__social {
     grid-column: col-start 4 / col-end 4;
     justify-self: center;
     align-self: center;
+
+    @media only screen and (max-width: $bp-smallerest-small) {
+      grid-column: col-start 3 / col-end 4;
+    }
+
     ul {
       list-style: none;
       li a {
@@ -51,6 +63,10 @@
 
   cursor: pointer;
 
+  @media only screen and (max-width: $bp-smallerest-small) {
+    display: none;
+  }
+
   &:hover {
     transform: rotate(5deg);
   }
@@ -60,4 +76,7 @@
   align-self: center;
   grid-column: col-start 2 / col-end 3;
   padding: 2rem 3rem;
+  @media only screen and (max-width: $bp-smallerest-small) {
+    grid-column: col-start 1 / col-end 4;
+  }
 }

@@ -4,6 +4,16 @@
   position: fixed;
   width: 100%;
   animation: animateNav 0.5s ease-in-out;
+  @media only screen and (max-width: $bp-smallerest-small) {
+    background: transparent;
+    animation: none;
+  }
+}
+
+.sticky .logo {
+  @media only screen and (max-width: $bp-smallerest-small) {
+    display: none;
+  }
 }
 
 /// HEADER section

@@ -32,7 +32,9 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <title>SecretStrawberry</title>
   </head>
   <body class="container">
@@ -48,7 +50,14 @@
         />
       </div>
       <div class="topreventreanimate"></div>
-      <ul class="navigation__list">
+      <div class="navigation__mobile">
+        <button
+          class="button-header button-header--white header__button--2 button-header--mobile js--mobile-menu"
+        >
+          Menu
+        </button>
+      </div>
+      <ul class="navigation__list navigation__mobile--hidden js--mobile-nav">
         <li>
           <a class="navigation__link home-link">
             <svg class="navigation__icon">
@@ -82,8 +91,6 @@
     </nav>
 
     <header class="header" id="home">
-      <!-- <h1 class="heading">SecretStrawberry</h1> -->
-      <!-- <h1 class="header__heading-1 heading">Web design Services</h1> -->
       <h1 class="heading">Web design Services</h1>
 
       <div class="header__slogan">
@@ -91,7 +98,7 @@
       </div>
 
       <button
-        class="button-header button-header--white button-header--pink header__button--2 contact-link"
+        class="button-header button-header--white button-header--white-animated button-header--pink header__button--2 contact-link"
       >
         Contact me
       </button>

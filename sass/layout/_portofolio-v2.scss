@@ -20,6 +20,31 @@
 
   transition: all 0.5s;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns:
+      2rem repeat(4, [col-start] minmax(min-content, 1fr) [col-end])
+      2rem;
+  }
+
+  @media only screen and (max-width: $bp-smallerest) {
+    grid-template-rows: 4rem repeat(
+        4,
+        [row-start] minmax(min-content, 1fr) [row-end]
+      );
+    grid-template-columns:
+      2rem repeat(3, [col-start] minmax(min-content, 1fr) [col-end])
+      2rem;
+  }
+
+  @media only screen and (max-width: $bp-smallerest-small) {
+    grid-template-rows: 4rem 1fr repeat(
+        7,
+        [row-start] minmax(min-content, max-content) [row-end]
+      );
+    grid-template-columns: [col-start] minmax(min-content, max-content) [col-end];
+    justify-items: center;
+  }
+
   &__images {
     transition: all 1s;
     overflow: hidden;
@@ -29,6 +54,10 @@
     // for blurring effect on top of the picture, img beeing little bit transparent
     background-color: rgba ($color-font-grey-1, 1);
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-smallerest-small) {
+      width: 90%;
+    }
 
     // box surrounding the pics in the portoflio
     // enlarge on hover
@@ -75,6 +104,60 @@
     &--6 {
       grid-column: col-start 2 / col-end 2;
     }
+
+    @media only screen and (max-width: $bp-smallerest) {
+      &--1,
+      &--2,
+      &--3 {
+        grid-row: row-start 3 / row-end 3;
+      }
+      &--1,
+      &--4 {
+        grid-column: col-start 1 / col-end 1;
+      }
+      &--2,
+      &--5 {
+        grid-column: col-start 2 / col-end 2;
+      }
+      &--3,
+      &--6 {
+        grid-column: col-start 3 / col-end 3;
+      }
+      &--4,
+      &--5,
+      &--6 {
+        grid-row: row-start 4 / row-end 4;
+      }
+    }
+    @media only screen and (max-width: $bp-smallerest-small) {
+      &--1,
+      &--2,
+      &--3,
+      &--4,
+      &--5,
+      &--6 {
+        grid-column: col-start / col-end;
+      }
+
+      &--1 {
+        grid-row: row-start 2 / row-end 2;
+      }
+      &--2 {
+        grid-row: row-start 3 / row-end 3;
+      }
+      &--3 {
+        grid-row: row-start 4 / row-end 4;
+      }
+      &--4 {
+        grid-row: row-start 5 / row-end 5;
+      }
+      &--5 {
+        grid-row: row-start 6 / row-end 6;
+      }
+      &--6 {
+        grid-row: row-start 7 / row-end 7;
+      }
+    }
   }
 
   &__text-content {
@@ -91,9 +174,21 @@
     @include boxShadowLighter;
     border-radius: 2px;
 
+    @media only screen and (max-width: $bp-smallerest) {
+      grid-row: row-start 1 / row-end 2;
+      grid-column: col-start 1 / col-end 3;
+    }
+
+    @media only screen and (max-width: $bp-smallerest-small) {
+      grid-row: 2 / 3;
+      grid-column: col-start / col-end;
+      height: 100%;
+    }
+
     h2 {
       text-align: center;
       color: $color-font-2;
+      margin-bottom: 2rem;
     }
 
     p {
@@ -107,4 +202,7 @@
   width: 100%;
   height: 100%;
   border-radius: 2px;
+
+  @media only screen and (max-width: $bp-smallerest-small) {
+  }
 }

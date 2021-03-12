@@ -42,6 +42,7 @@
     font-size: 3rem;
     font-weight: 300;
     color: $color-font-2;
+    text-align: center;
 
     animation: moveFromLeft;
     animation-duration: 2s;
@@ -83,6 +84,18 @@
   color: $color-font-2;
   font-family: "Josefin Sans", sans-serif;
   align-self: center;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 8rem;
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 6rem;
+  }
+
+  @media only screen and (max-width: $bp-smallerest-smaller) {
+    font-size: 4rem;
+  }
 
   // the undeline from the heading
   // animating the ::after so it appears from left.

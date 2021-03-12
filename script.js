@@ -151,51 +151,18 @@ const letterDisperse = function () {
 
 setTimeout(letterDisperse, 2700);
 
-/////////////////////////////////////////////
-// PORTOFOLIO text anmimation
-// text-hidden & text-animated can be found in _sections.scss
+///////////////////////////////////////////
+// MOBILE MENU
 
-// const revealText = function (entries, observer) {
-//   const [entry] = entries;
-//   if (!entry.isIntersecting) return;
-//   else {
-//     entry.target.classList.remove("text-hidden");
-//     entry.target.classList.add("text-animated");
-//   }
-//   observer.unobserve(entry.target);
-// };
+const mobileMenu = document.querySelector(".js--mobile-menu");
+const mobileNav = document.querySelector(".js--mobile-nav");
 
-// const portofolioTextObserver = new IntersectionObserver(revealText, {
-//   root: null,
-//   threshold: 0.7,
-// });
-
-// portofolioTextObserver.observe(portofolioText);
-// portofolioText.classList.add("text-hidden");
-
-///////////////////////////////////////////////////////
-///STORY TECHNOLOGIES animations
-// tech--hidden & tech--reveal can be founs in _section.scss
-
-// const revealTech = function (entries, observer) {
-//   const [entry] = entries;
-//   // I`ve choose to check if just one of the entries (entry) is intersecting
-//   // because all entries are in the same line of intersection with the viewport
-//   if (!entry.isIntersecting) return;
-//   else {
-//     entries.forEach(function (entry) {
-//       entry.target.classList.remove("tech--hidden");
-//       entry.target.classList.add("tech--reveal");
-//     });
-//   }
-// };
-
-// const techObserver = new IntersectionObserver(revealTech, {
-//   root: null,
-//   threshold: 0.8,
-// });
-
-// technologies.forEach(function (tech) {
-//   techObserver.observe(tech);
-//   tech.classList.add("tech--hidden");
-// });
+mobileMenu.addEventListener("click", function (e) {
+  if (mobileNav.classList.contains("navigation__mobile--hidden")) {
+    mobileNav.classList.remove("navigation__mobile--hidden");
+    mobileNav.classList.add("navigation__mobile--show");
+  } else {
+    mobileNav.classList.remove("navigation__mobile--show");
+    mobileNav.classList.add("navigation__mobile--hidden");
+  }
+});

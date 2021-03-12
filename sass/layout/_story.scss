@@ -20,6 +20,22 @@
 
   transition: all 0.5s;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns:
+      2rem repeat(3, [p-start] minmax(min-content, 1fr) [p-end])
+      [pic-start] minmax(min-content, 1fr) [pic-end] 2rem;
+  }
+
+  @media only screen and (max-width: $bp-smallerest-small) {
+    grid-template-rows:
+      2rem repeat(3, [row-start] minmax(min-content, max-content) [row-end])
+      2rem;
+    grid-template-columns: repeat(
+      2,
+      [col-start] minmax(min-content, max-content) [col-end]
+    );
+  }
+
   // the main text in story section
   &__hello {
     grid-row: row-start 1 / row-end 4;
@@ -29,6 +45,15 @@
     border-radius: 2px;
 
     transition: all 3s, opacity 3s;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: p-start 1 / p-end 2;
+    }
+
+    @media only screen and (max-width: $bp-smallerest-small) {
+      grid-row: row-start 1 / row-end 1;
+      grid-column: col-start 1 / col-end 2;
+    }
   }
 
   /// TECHNOLOGIES POSITION
@@ -38,6 +63,15 @@
     justify-content: space-between;
     grid-row: row-start 5 / row-end 6;
     grid-column: p-start / p-end 3;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: p-start / pic-end;
+    }
+
+    @media only screen and (max-width: $bp-smallerest-small) {
+      grid-row: row-start 3 / row-end 3;
+      grid-column: col-start 1 / col-end 2;
+    }
   }
 
   ///TECHNOLOGIES common properties of the squares in the story section
@@ -47,7 +81,6 @@
     text-align: center;
     width: 32%;
     height: 100%;
-    grid-row: row-start 5 / row-end 6;
 
     @include boxShadowLighter;
 
@@ -91,6 +124,16 @@
     transition: all 1s;
     &:hover {
       transform: scaleX(1.04);
+    }
+    @media only screen and (max-width: $bp-large) {
+      grid-row: row-start 1 / row-end 4;
+      grid-column: p-start 3 / pic-end;
+    }
+    @media only screen and (max-width: $bp-smallerest-small) {
+      grid-row: row-start 2 / row-end 2;
+      grid-column: col-start 1 / col-end 2;
+      width: 90%;
+      margin-left: 5%;
     }
   }
 

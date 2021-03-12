@@ -22,6 +22,13 @@
     sub {
       font-size: 2rem;
       color: $color-font-2;
+      @media only screen and (max-width: $bp-smallerest-smaller) {
+        font-size: 1.56rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-smallerest-smaller) {
+      font-size: 2rem;
     }
   }
 
